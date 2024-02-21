@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Aktiv grotesk';
+  src: url('/public/fonts/OTF/AktivGrotesk-Medium.otf');
+  src: local('Aktiv grotesk Medium'), local('CarmenSans-Medium'),
+    url('/public/font/CarmenSans-Medium.eot?#iefix') format('embedded-opentype'),
+    url('/public/fonts/OTF/AktivGrotesk-Medium.otf') format('otf'),
+}
+
 :root {
   --border-radius: 12px;
   --background-start-rgb: 214, 219, 220;
@@ -11,6 +19,7 @@
 }
 
 body {
+  font-family: Aktiv grotesk;
   color: rgb(var(--foreground-rgb));
   background: #fff;
 }

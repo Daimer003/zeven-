@@ -1,4 +1,4 @@
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, filter } from "@chakra-ui/react";
 import { mode } from '@chakra-ui/theme-tools'
 
 const styles = {
@@ -10,6 +10,34 @@ const styles = {
 }
 
 const components = {
+
+    Button: {
+        variants: {
+            buttonPrimary: (props: any) => ({
+                bg: '#01b2ab',
+                color: '#ffffff',
+                borderColor: 'none',
+                borderWidth: 'none',
+                borderRadius: '4px',
+                _hover: {
+                    bg: 'rgba(0, 0, 0, 0.1)',
+                },
+            }),
+
+            buttonSecondary: (props: any) => ({
+                bg: 'rgba(255, 255, 255, 0.08)',
+                color: '#ffffff',
+                borderColor: 'none',
+                borderWidth: 'none',
+                borderRadius: '10px',
+                blur: '1px',
+                _hover: {
+                    bg: 'rgba(0, 0, 0, 0.1)',
+                },
+            }),
+        },
+    },
+
     Heading: {
         variants: {
             'section-title': {
@@ -57,7 +85,7 @@ const theme = extendTheme({
     styles,
     components,
     fonts,
-    colors
+    colors,
 })
 
 export default theme;

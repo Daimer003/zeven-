@@ -24,12 +24,15 @@ const SectionThree = () => {
             flexDir="column"
             gap="40px"
             marginTop="160px"
+            position="relative"
+            zIndex={10}
         >
             <Text
                 as="h3"
                 fontSize="xxx-large"
                 fontWeight="600"
                 textAlign="center"
+                color="white"
             >
                 Nuestros aliados
             </Text>

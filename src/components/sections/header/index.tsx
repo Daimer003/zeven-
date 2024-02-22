@@ -53,6 +53,7 @@ const Header = () => {
                         <Text
                             as="h1"
                             fontSize="x-large"
+                            color="white"
                         >
                             Explora  un universo de <br />
                             <Text
@@ -62,7 +63,10 @@ const Header = () => {
                                 Oportunidades
                             </Text>
                         </Text>
-                        <Text as="p">
+                        <Text
+                            as="p"
+                            color="white"
+                        >
                             Únete a Zeven y empieza a invertir de manera inteligente
                         </Text>
                     </Box>

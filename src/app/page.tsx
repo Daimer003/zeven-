@@ -1,5 +1,7 @@
 
 import Header from "@/components/sections/header";
+import SectionFive from "@/components/sections/sectionFive";
+import SectionFour from "@/components/sections/sectionFour";
 import SectionThree from "@/components/sections/sectionThree";
 import SectionTwo from "@/components/sections/sectionTwo";
 import Navbar from "@/components/shared/navbar/navbar";
@@ -30,6 +32,8 @@ export default function Home() {
         <Header />
         <SectionTwo />
         <SectionThree />
+        <SectionFour />
+        <SectionFive />
       </Box>
 
     </Container>

@@ -29,12 +29,22 @@ const Services = () => {
                         display="flex"
                         gap="10px"
                     >
-                        <FiUsers size="28px" />
-                        <Text as="span" fontSize="x-large">
+                        <FiUsers
+                            color="white"
+                            size="28px"
+                        />
+                        <Text
+                            as="span"
+                            fontSize="x-large"
+                            color="white"
+                        >
                             1000+
                         </Text>
                     </Box>
-                    <Text as="span">
+                    <Text
+                        as="span"
+                        color="white"
+                    >
                         Instrumentos
                         de trading
                     </Text>
@@ -55,12 +65,22 @@ const Services = () => {
                         display="flex"
                         gap="10px"
                     >
-                        <BiSupport size="28px" />
-                        <Text as="span" fontSize="x-large">
+                        <BiSupport
+                            size="28px"
+                            color="white"
+                        />
+                        <Text
+                            as="span"
+                            fontSize="x-large"
+                            color="white"
+                        >
                             0.0
                         </Text>
                     </Box>
-                    <Text as="span">
+                    <Text
+                        as="span"
+                        color="white"
+                    >
                         Instrumentos
                         de trading
                     </Text>
@@ -81,12 +101,23 @@ const Services = () => {
                         display="flex"
                         gap="10px"
                     >
-                        <BiSupport size="28px" />
-                        <Text as="span" fontSize="x-large">
+                        <BiSupport
+                            size="28px"
+                            color="white"
+                        />
+                        <Text
+                            as="span"
+                            fontSize="x-large"
+                            color="white"
+                        >
                             24/7
                         </Text>
                     </Box>
-                    <Text as="span" textAlign="center">
+                    <Text
+                        as="span"
+                        textAlign="center"
+                        color="white"
+                    >
                         Trading de  CFDs
                         sobre criptodivisas
                     </Text>
@@ -107,12 +138,22 @@ const Services = () => {
                         display="flex"
                         gap="10px"
                     >
-                        <FiUsers size="28px" />
-                        <Text as="span" fontSize="x-large">
+                        <FiUsers
+                            size="28px"
+                            color="white"
+                        />
+                        <Text
+                            as="span"
+                            fontSize="x-large"
+                            color="white"
+                        >
                             1000:1
                         </Text>
                     </Box>
-                    <Text as="span">
+                    <Text
+                        as="span"
+                        color="white"
+                    >
                         De apalancamiento
                     </Text>
                 </Box>
@@ -132,12 +173,22 @@ const Services = () => {
                         display="flex"
                         gap="10px"
                     >
-                        <FiUsers size="28px" />
-                        <Text as="span" fontSize="x-large">
+                        <FiUsers
+                            size="28px"
+                            color="white"
+                        />
+                        <Text
+                            as="span"
+                            fontSize="x-large"
+                            color="white"
+                        >
                             0%
                         </Text>
                     </Box>
-                    <Text as="span">
+                    <Text
+                        as="span"
+                        color="white"
+                    >
                         Comisión
                         por deposito
                     </Text>

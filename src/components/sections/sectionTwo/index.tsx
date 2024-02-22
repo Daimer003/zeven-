@@ -6,7 +6,6 @@ const SectionTwo = () => {
         <Box
             display="flex"
             width="100%"
-
         >
             <ContainerZeven />
         </Box>

@@ -23,7 +23,12 @@ const ContainerZeven = () => {
                     height="auto"
                 >
                     <Box w="100%">
-                        <Text as="h4" fontSize="xxx-large" fontWeight="600">
+                        <Text
+                            as="h4"
+                            fontSize="xxx-large"
+                            fontWeight="600"
+                            color="white"
+                        >
                             Bono por deposito
                             en cuenta Instantanea
                             y Standard del 50%

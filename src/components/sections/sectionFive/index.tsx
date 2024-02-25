@@ -1,9 +1,8 @@
+import CardPrices from "@/components/cards/cardPrices";
 import {
     Box,
     Text
 } from "@chakra-ui/react";
-
-
 
 const SectionFive = () => {
     return (
@@ -26,6 +25,14 @@ const SectionFive = () => {
             >
                 Nuestras cuentas
             </Text>
+            <Box
+                display='flex'
+                gap='40px'
+            >
+                <CardPrices />
+                <CardPrices />
+                <CardPrices />
+            </Box>
         </Box>
     );
 }

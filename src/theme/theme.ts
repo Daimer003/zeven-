@@ -59,9 +59,9 @@ const components = {
     }
 }
 
-const fonts = {
-    heading: "'M PLUS Rounded 1c'"
-}
+// const fonts = {
+//     heading: "'M PLUS Rounded 1c'"
+// }
 
 const colors = {
     grassTeal: '#D0D9D6',
@@ -84,7 +84,7 @@ const theme = extendTheme({
     config,
     styles,
     components,
-    fonts,
+    // fonts,
     colors,
 })
 

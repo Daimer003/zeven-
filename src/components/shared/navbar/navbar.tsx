@@ -1,4 +1,5 @@
 'use client'
+import React, { useRef } from "react";
 import {
     Box,
     Text,
@@ -9,15 +10,25 @@ import {
     Link,
     Menu,
     MenuButton,
-    MenuList,
-    MenuItem,
     IconButton,
+    useDisclosure,
+    Drawer,
+    DrawerBody,
+    DrawerFooter,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { HamburgerIcon } from '@chakra-ui/icons'
+import NextLink from 'next/link'
+
 
 
 const Navbar = () => {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const btnRef = React.useRef<any>()
+
     return (
         <Box
             display="flex"
@@ -41,7 +52,9 @@ const Navbar = () => {
                     width={35}
                     height={35}
                 />
-                <Text as="h2" fontSize="x-large">Zeven</Text>
+                <Text as="h2" fontSize="x-large">
+                    Zeven
+                </Text>
             </Box>
             <Spacer />
             <Box
@@ -95,21 +108,59 @@ const Navbar = () => {
                     aria-label='Options'
                     icon={<HamburgerIcon />}
                     variant='outline'
+                    ref={btnRef}
+                    onClick={onOpen}
                 />
-                <MenuList>
-                    <MenuItem command='⌘T'>
-                        New Tab
-                    </MenuItem>
-                    <MenuItem command='⌘N'>
-                        New Window
-                    </MenuItem>
-                    <MenuItem command='⌘⇧N'>
-                        Open Closed Tab
-                    </MenuItem>
-                    <MenuItem command='⌘O'>
-                        Open File...
-                    </MenuItem>
-                </MenuList>
+                <Drawer
+                    isOpen={isOpen}
+                    placement='right'
+                    onClose={onClose}
+                    finalFocusRef={btnRef}
+                >
+                    <DrawerOverlay />
+                    <DrawerContent bg="black">
+                        <DrawerCloseButton />
+                        <DrawerBody
+                            display='flex'
+                            flexDir='column'
+                            gap='20px'
+                            marginTop='40px'
+                        >
+                            <Link as={NextLink} href='/home' color='white'>
+                                Opera con nosotros
+                            </Link>
+                            <Link as={NextLink} href='/home' color='white'>
+                                Plataformas
+                            </Link>
+                            <Link as={NextLink} href='/home' color='white'>
+                                Programa IB
+                            </Link>
+                            <Link as={NextLink} href='/home' color='white'>
+                                Educación
+                            </Link>
+                            <Link as={NextLink} href='/home' color='white'>
+                                Empresa
+                            </Link>
+                        </DrawerBody>
+
+                        <DrawerFooter>
+                            <Button
+                                colorScheme='black'
+                                variant="buttonPrimary"
+                                mr={3} onClick={onClose}
+                            >
+                                Iniciar sesión
+                            </Button>
+                            <Button
+                                colorScheme='gray'
+                                variant="buttonSecondary"
+                                borderRadius='4px'
+                            >
+                                Registrarse
+                            </Button>
+                        </DrawerFooter>
+                    </DrawerContent>
+                </Drawer>
             </Menu>
         </Box >
     );

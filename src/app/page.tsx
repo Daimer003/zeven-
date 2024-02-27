@@ -24,9 +24,7 @@ export default function Home() {
 
       <Box
         width="100%"
-        maxWidth="1400px"
-        position="relative"
-
+        maxW="1400px"
       >
         <Navbar />
         <Header />

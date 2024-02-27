@@ -1,3 +1,4 @@
+'use client'
 import {
     Box,
     Text,
@@ -5,9 +6,15 @@ import {
     ButtonGroup,
     Spacer,
     Stack,
-    Link
+    Link,
+    Menu,
+    MenuButton,
+    MenuList,
+    MenuItem,
+    IconButton,
 } from "@chakra-ui/react";
 import Image from "next/image";
+import { HamburgerIcon } from '@chakra-ui/icons'
 
 
 const Navbar = () => {
@@ -38,12 +45,12 @@ const Navbar = () => {
             </Box>
             <Spacer />
             <Box
-                display="flex"
+                display={{ base: 'none', xl: 'flex' }}
                 gap="20px"
             >
                 <Stack
+                    display="flex"
                     direction={{ base: 'column', xl: 'row' }}
-                    display={{ base: 'none', xl: 'flex' }}
                     width={{ base: 'full', xl: 'auto' }}
                     alignItems="center"
                     gap="40px"
@@ -81,6 +88,29 @@ const Navbar = () => {
 
                 </ButtonGroup>
             </Box>
+            <Menu >
+                <MenuButton
+                    display={{ base: 'flex', xl: 'none' }}
+                    as={IconButton}
+                    aria-label='Options'
+                    icon={<HamburgerIcon />}
+                    variant='outline'
+                />
+                <MenuList>
+                    <MenuItem command='⌘T'>
+                        New Tab
+                    </MenuItem>
+                    <MenuItem command='⌘N'>
+                        New Window
+                    </MenuItem>
+                    <MenuItem command='⌘⇧N'>
+                        Open Closed Tab
+                    </MenuItem>
+                    <MenuItem command='⌘O'>
+                        Open File...
+                    </MenuItem>
+                </MenuList>
+            </Menu>
         </Box >
     );
 }

@@ -11,6 +11,7 @@ const Services = () => {
             height="auto"
             marginTop="40px"
             zIndex="40"
+            overflow="auto"
         >
             <HStack spacing='24px' w="100%">
                 <Box
@@ -19,6 +20,7 @@ const Services = () => {
                     justifyContent="center"
                     alignItems="center"
                     w='100%'
+                    minW='200px'
                     minHeight='140px'
                     bg='rgba(255, 255, 255, 0.08)'
                     padding="10px"

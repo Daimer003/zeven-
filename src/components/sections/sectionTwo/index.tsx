@@ -6,6 +6,8 @@ const SectionTwo = () => {
         <Box
             display="flex"
             width="100%"
+            height='auto'
+            marginTop="160px"
         >
             <ContainerZeven />
         </Box>

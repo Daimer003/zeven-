@@ -27,7 +27,7 @@ const ContainerZeven = () => {
                     <Box w="100%">
                         <Text
                             as="h4"
-                            fontSize="xxx-large"
+                            fontSize={{ base: "x-large", md: "xxx-large" }}
                             fontWeight="600"
                             color="white"
                         >

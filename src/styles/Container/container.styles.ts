@@ -8,7 +8,7 @@ export const BoxZeven = styled(Box)`
   justify-content: center;
   width: 100%;
   height: auto;
-  max-height: 500px;
+  max-height: 600px;
   position: relative;
   z-index: 999;
   border-radius: 28px;

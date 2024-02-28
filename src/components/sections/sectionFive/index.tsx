@@ -12,13 +12,13 @@ const SectionFive = () => {
             flexDir="column"
             alignItems="center"
             gap="40px"
-            marginTop="160px"
+            marginTop={{ base: "80px", md: "160px" }}
         >
 
             <Text
                 as="h3"
                 maxWidth="700px"
-                fontSize="xxx-large"
+                fontSize={{ base: "xx-large", md: "xxx-large" }}
                 fontWeight="600"
                 textAlign="center"
                 color="white"

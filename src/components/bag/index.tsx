@@ -23,7 +23,8 @@ const Bag = () => {
             >
                 <Box
                     display="flex"
-                    width="80%"
+                    flexDir={{ base: "column", md: "row" }}
+                    width="100%"
                     height="auto"
                 >
                     <Box
@@ -72,6 +73,7 @@ const Bag = () => {
                     display="flex"
                     width="100%"
                     gap="20px"
+                    overflowX="auto"
                 >
                     <CardBag />
                     <CardBag />

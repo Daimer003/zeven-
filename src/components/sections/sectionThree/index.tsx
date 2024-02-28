@@ -23,20 +23,20 @@ const SectionThree = () => {
             display="flex"
             flexDir="column"
             gap="40px"
-            marginTop="160px"
+            marginTop={{ base: "80px", md: "160px" }}
             position="relative"
             zIndex={10}
         >
             <Text
                 as="h3"
-                fontSize="xxx-large"
+                fontSize={{ base: "xx-large", md: "xxx-large" }}
                 fontWeight="600"
                 textAlign="center"
                 color="white"
             >
                 Nuestros aliados
             </Text>
-            <Grid templateColumns='repeat(9, 1fr)' gap={10}>
+            <Grid templateColumns={{ base: 'repeat(3, 1fr)', md: 'repeat(6, 1fr)', lg: 'repeat(9, 1fr)' }} gap={10}>
                 {
                     imgAliado.map((id: any, index: any) => (
                         <GridItem key={index} w='100%' h='auto' >

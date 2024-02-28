@@ -7,7 +7,7 @@ const SectionTwo = () => {
             display="flex"
             width="100%"
             height='auto'
-            marginTop={{ base: "160px", md: "0" }}
+            marginTop={{ base: "80px", lg: "0" }}
         >
             <ContainerZeven />
         </Box>

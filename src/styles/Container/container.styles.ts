@@ -8,11 +8,11 @@ export const BoxZeven = styled(Box)`
   justify-content: center;
   width: 100%;
   height: auto;
-  max-height: 600px;
+  max-height: 750px;
   position: relative;
   z-index: 999;
   border-radius: 28px;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.9);
+  box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   ::before{
      display: flex;

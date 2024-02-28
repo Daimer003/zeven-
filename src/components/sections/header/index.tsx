@@ -47,17 +47,21 @@ const Header = () => {
                     gap="20px"
                 >
                     <Box
+                        display='flex'
+                        flexDir='column'
                         width="100%"
                         height="auto"
+                        gap='10px'
                     >
                         <Text
                             as="h1"
-                            fontSize="x-large"
                             color="white"
+                            fontSize={{ base: "20px", md: "36px", xl: "38px" }}
                         >
                             Explora  un universo de <br />
                             <Text
-                                fontSize={{ base: "56px", xl: "72px" }}
+                                fontSize={{ base: "40px", md: "56px", xl: "82px" }}
+                                lineHeight={{ base: "50px", md: "56px", xl: "92px" }}
                                 color="#01b2ab"
                                 fontWeight="700">
                                 Oportunidades

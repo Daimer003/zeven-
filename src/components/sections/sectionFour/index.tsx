@@ -13,7 +13,7 @@ const SectionFour = () => {
             flexDir="column"
             alignItems="center"
             gap="40px"
-            marginTop="160px"
+            marginTop={{ base: "80px", md: "160px" }}
         >
             <Box
                 display="flex"
@@ -34,7 +34,7 @@ const SectionFour = () => {
             <Text
                 as="h3"
                 maxWidth="700px"
-                fontSize="xxx-large"
+                fontSize={{ base: "xx-large", md: "xxx-large" }}
                 fontWeight="600"
                 textAlign="center"
                 color="white"
@@ -69,22 +69,6 @@ const SectionFour = () => {
                     borderRadius='4px'
                 >
                     Acciones
-                </Button>
-                <Button
-                    width="100%"
-                    colorScheme='gray'
-                    variant="buttonSecondary"
-                    borderRadius='4px'
-                >
-                    Crypto
-                </Button>
-                <Button
-                    width="100%"
-                    colorScheme='gray'
-                    variant="buttonSecondary"
-                    borderRadius='4px'
-                >
-                    Registrarse
                 </Button>
             </Box>
             <Bag />

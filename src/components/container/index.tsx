@@ -38,6 +38,7 @@ const ContainerZeven = () => {
                         <Button
                             colorScheme='black'
                             variant="buttonPrimary"
+                            marginTop='20px'
                         >
                             Más información
                         </Button>

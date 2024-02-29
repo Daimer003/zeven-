@@ -1,8 +1,10 @@
 import CardPrices from "@/components/cards/cardPrices";
+import CarouselSwiper from "@/components/swiper";
 import {
     Box,
     Text
 } from "@chakra-ui/react";
+import { SwiperSlide } from 'swiper/react';
 
 const SectionFive = () => {
     return (
@@ -27,11 +29,21 @@ const SectionFive = () => {
             </Text>
             <Box
                 display='flex'
+                width="100%"
                 gap='40px'
             >
-                <CardPrices />
-                <CardPrices />
-                <CardPrices />
+                <CarouselSwiper breakpoint={3}>
+                    <SwiperSlide>
+                        <CardPrices />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <CardPrices />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <CardPrices />
+                    </SwiperSlide>
+                </CarouselSwiper>
+
             </Box>
         </Box>
     );

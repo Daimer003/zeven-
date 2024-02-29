@@ -1,8 +1,7 @@
 'use client'
-import React, { useRef } from "react";
+import React from "react";
 import {
     Box,
-    Text,
     Button,
     ButtonGroup,
     Spacer,
@@ -25,7 +24,6 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 
 
-
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef<any>()
@@ -44,7 +42,7 @@ const Navbar = () => {
             css={{ backdropFilter: 'blur(10px)' }}
             position="fixed"
             left='0'
-            zIndex="9999"
+            zIndex="999"
         >
             <Box
                 display='flex'
@@ -62,9 +60,6 @@ const Navbar = () => {
                         width={35}
                         height={35}
                     />
-                    <Text as="h2" fontSize="x-large">
-                        Zeven
-                    </Text>
                 </Box>
                 <Spacer />
                 <Box

@@ -10,19 +10,21 @@ const SectionFour = () => {
         <Box
             display="flex"
             width="100%"
+            // height={{ base: 'auto', lg: '950px' }}
             flexDir="column"
             alignItems="center"
             gap="40px"
             marginTop={{ base: "80px", md: "160px" }}
+            position="relative"
         >
             <Box
                 display="flex"
                 content=""
-                width="2000px"
+                width="1500px"
                 height="100%"
                 position="absolute"
                 left="-70%"
-                top="20%"
+                top="-200px"
                 zIndex={0}
             >
                 <Box

@@ -10,7 +10,7 @@ export const BoxZeven = styled(Box)`
   height: auto;
   max-height: 750px;
   position: relative;
-  z-index: 999;
+  z-index: 0;
   border-radius: 28px;
   box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.2);
   overflow: hidden;

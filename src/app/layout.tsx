@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/lib/provider";
 import { register } from 'swiper/element/bundle';
-
+import "../styles/swiper.css"
 
 const inter = Inter({ subsets: ["latin"] });
 

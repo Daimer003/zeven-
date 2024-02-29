@@ -8,10 +8,12 @@ export const BoxCard = styled(Box)`
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  max-width: 355px;
   min-width: 350px;
   height: auto;
   position: relative;
-  z-index: 999;
+  margin: auto;
+  z-index: 0;
   border-radius: 20px;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.9);
   overflow: hidden;

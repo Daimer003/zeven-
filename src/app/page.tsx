@@ -1,8 +1,10 @@
 'use client'
+import { useState, useEffect } from "react";
 import Loader from "@/components/loader/loader";
 import Header from "@/components/sections/header";
 import SectionFive from "@/components/sections/sectionFive";
 import SectionFour from "@/components/sections/sectionFour";
+import SectionSix from "@/components/sections/sectionSix";
 import SectionThree from "@/components/sections/sectionThree";
 import SectionTwo from "@/components/sections/sectionTwo";
 import Navbar from "@/components/shared/navbar/navbar";
@@ -10,7 +12,6 @@ import {
   Container,
   Box,
 } from "@chakra-ui/react";
-import { useState, useEffect } from "react";
 
 
 export default function Home() {
@@ -48,6 +49,7 @@ export default function Home() {
             <SectionThree />
             <SectionFour />
             <SectionFive />
+            <SectionSix />
           </Box>
       }
     </Container>

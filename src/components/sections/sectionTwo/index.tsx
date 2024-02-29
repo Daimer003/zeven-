@@ -1,5 +1,7 @@
 import ContainerZeven from "@/components/container";
+import CarouselSwiper from "@/components/swiper";
 import { Box } from "@chakra-ui/react";
+import { SwiperSlide } from 'swiper/react';
 
 const SectionTwo = () => {
     return (
@@ -9,7 +11,17 @@ const SectionTwo = () => {
             height='auto'
             marginTop={{ base: "80px", lg: "0" }}
         >
-            <ContainerZeven />
+            <CarouselSwiper breakpoint={1}>
+                <SwiperSlide>
+                    <ContainerZeven />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <ContainerZeven />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <ContainerZeven />
+                </SwiperSlide>
+            </CarouselSwiper>
         </Box>
     );
 }

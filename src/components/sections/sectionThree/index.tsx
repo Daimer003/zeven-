@@ -36,7 +36,15 @@ const SectionThree = () => {
             >
                 Nuestros aliados
             </Text>
-            <Grid templateColumns={{ base: 'repeat(3, 1fr)', md: 'repeat(6, 1fr)', lg: 'repeat(9, 1fr)' }} gap={10}>
+            <Grid
+                templateColumns={{
+                    base: 'repeat(3, 1fr)',
+                    md: 'repeat(6, 1fr)',
+                    lg: 'repeat(9, 1fr)'
+                }}
+                gap={10}
+                opacity="50%"
+            >
                 {
                     imgAliado.map((id: any, index: any) => (
                         <GridItem key={index} w='100%' h='auto' >

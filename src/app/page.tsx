@@ -12,6 +12,10 @@ import {
   Container,
   Box,
 } from "@chakra-ui/react";
+import SectionSeven from "@/components/sections/sectionSeven ";
+import SectionEight from "@/components/sections/sectionEight";
+import SectionNine from "@/components/sections/sectionNine";
+import SectionTen from "@/components/sections/sectionTen";
 
 
 export default function Home() {
@@ -50,6 +54,10 @@ export default function Home() {
             <SectionFour />
             <SectionFive />
             <SectionSix />
+            <SectionSeven />
+            <SectionEight />
+            <SectionNine />
+            <SectionTen />
           </Box>
       }
     </Container>

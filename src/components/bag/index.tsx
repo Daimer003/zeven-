@@ -56,7 +56,11 @@ const Bag = () => {
                             Invierte ahora
                         </Button>
                     </Box>
-                    <Box width="100%">
+                    <Box
+                        display="flex"
+                        justifyContent="center"
+                        width="100%"
+                    >
                         <Image
                             src="/assets/imagen2.webp"
                             alt="Imagen del header"

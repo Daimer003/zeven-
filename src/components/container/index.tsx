@@ -2,10 +2,12 @@ import { BoxZeven } from "@/styles/Container/container.styles";
 import { Box, Button, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
+interface Props {
+    title: string,
+    img: string
+}
 
-const ContainerZeven = () => {
-
-
+const ContainerZeven = ({ title, img }: Props) => {
     return (
         <BoxZeven>
             <Box
@@ -23,25 +25,44 @@ const ContainerZeven = () => {
                     justifyContent="center"
                     width="100%"
                     height="auto"
+                    minHeight="450px"
                 >
-                    <Box w="100%">
+                    <Box
+                        display="flex"
+                        flexDir="column"
+                        alignItems={{ base: "center", md: "start" }}
+                        w="100%"
+                    >
                         <Text
                             as="h4"
                             fontSize={{ base: "x-large", md: "xxx-large" }}
+                            lineHeight={{ base: "30px", md: "50px" }}
+                            textAlign={{ base: "center", md: "start" }}
                             fontWeight="600"
                             color="white"
                         >
-                            Bono por deposito
-                            en cuenta Instantanea
-                            y Standard del 50%
+                            {title}
                         </Text>
-                        <Button
-                            colorScheme='black'
-                            variant="buttonPrimary"
+                        <Box
+                            display="flex"
+                            flexDir={{ base: "column", md: "row" }}
+                            alignItems="center"
+                            gap="10px"
                             marginTop='20px'
                         >
-                            Más información
-                        </Button>
+                            <Button
+                                colorScheme='black'
+                                variant="buttonPrimary"
+                            >
+                                Más información
+                            </Button>
+                            <Text
+                                textAlign={{ base: "center", md: "start" }}
+                                as="p"
+                            >
+                                *Aplican términos y condiciones
+                            </Text>
+                        </Box>
                     </Box>
                     <Box
                         display="flex"
@@ -49,8 +70,8 @@ const ContainerZeven = () => {
                         justifyContent="center"
                     >
                         <Image
-                            src="/assets/imagen1.webp"
-                            alt="Imagen del header"
+                            src={img}
+                            alt="Imagen"
                             style={{
                                 maxWidth: "400px",
                                 maxHeight: "400px"

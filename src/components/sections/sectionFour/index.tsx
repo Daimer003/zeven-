@@ -36,6 +36,7 @@ const SectionFour = () => {
             <Text
                 as="h3"
                 maxWidth="700px"
+                lineHeight='50px'
                 fontSize={{ base: "xx-large", md: "xxx-large" }}
                 fontWeight="600"
                 textAlign="center"

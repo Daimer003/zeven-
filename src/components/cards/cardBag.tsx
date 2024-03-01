@@ -89,7 +89,6 @@ const CardBag = () => {
                     -0.01%
                 </Text>s
             </Box>
-
         </Box>
     );
 }

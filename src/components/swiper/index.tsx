@@ -10,33 +10,34 @@ import 'swiper/css/scrollbar';
 
 interface Props {
     children: any,
-    breakpoint: number
+    breakpoint: number,
+    autoPlay: any
 }
 
-const CarouselSwiper = ({ children, breakpoint }: Props) => {
+const CarouselSwiper = ({ children, breakpoint, autoPlay }: Props) => {
     return (
         <Swiper
             // install Swiper modules
             modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={50}
             slidesPerView={1}
-            autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-            }}
+            autoplay={autoPlay}
             breakpoints={{
                 640: {
                     slidesPerView: 1,
                 },
                 1024: {
+                    slidesPerView: 2,
+                },
+                1440: {
                     slidesPerView: breakpoint,
                 },
             }}
             navigation
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => swiper}
+        // onSlideChange={() => console.log('slide change')}
         >
             {children}
         </Swiper>

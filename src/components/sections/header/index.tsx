@@ -1,6 +1,9 @@
 import Services from "@/components/services";
 import { Box, Stack, Text, Button } from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link";
+
+
 
 const Header = () => {
     return (
@@ -41,7 +44,7 @@ const Header = () => {
                     display="flex"
                     flexDir="column"
                     justifyContent="center"
-                    alignItems="center"
+
                     width="100%"
                     height="auto"
                     gap="20px"
@@ -56,6 +59,7 @@ const Header = () => {
                         <Text
                             as="h1"
                             color="white"
+                            fontWeight="600"
                             fontSize={{ base: "20px", md: "36px", xl: "38px" }}
                         >
                             Explora  un universo de <br />
@@ -76,21 +80,30 @@ const Header = () => {
                     </Box>
                     <Box
                         display="flex"
+                        justifyContent="start"
                         gap='20px'
-                        width="100%">
-                        <Button
-                            colorScheme='black'
-                            variant="buttonPrimary"
-                        >
-                            Iniciar sesión
-                        </Button>
-                        <Button
-                            colorScheme='gray'
-                            variant="buttonSecondary"
-                            borderRadius='4px'
-                        >
-                            Registrarse
-                        </Button>
+                        width="100%"
+                        maxWidth="410px"
+                    >
+                        <Link href="">
+                            <Button
+                                colorScheme='black'
+                                w={{ base: '150px', md: '200px' }}
+                                variant="buttonPrimary"
+                            >
+                                Iniciar sesión
+                            </Button>
+                        </Link>
+                        <Link href="" >
+                            <Button
+                                colorScheme='gray'
+                                w={{ base: '150px', md: '200px' }}
+                                variant="buttonSecondary"
+                                borderRadius='4px'
+                            >
+                                Registrarse
+                            </Button>
+                        </Link>
                     </Box>
                 </Box>
                 <Box

@@ -7,6 +7,7 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { FaArrowCircleDown, FaArrowCircleUp } from "react-icons/fa";
+import { sectionSix } from "@/utils/Data/data";
 
 
 const SectionSix = () => {
@@ -61,6 +62,7 @@ const SectionSix = () => {
                     left='40%'
                     top='-40px'
                     zIndex={9}
+                    isDisabled={positionScroll == 560}
                     onClick={scrollTop}><FaArrowCircleUp size={40} /></Button>
                 <Button
                     display='flex'
@@ -69,6 +71,7 @@ const SectionSix = () => {
                     left='40%'
                     bottom='-40px'
                     zIndex={9}
+                    isDisabled={positionScroll < 0}
                     onClick={scrollBottom}><FaArrowCircleDown size={40} /></Button>
 
                 <Box
@@ -76,7 +79,6 @@ const SectionSix = () => {
                     display='flex'
                     flexDir='row'
                     alignItems='center'
-                    // background='gray'
                     width='100%'
                     maxHeight="700px"
                     overflow='hidden'
@@ -102,115 +104,33 @@ const SectionSix = () => {
                         height='700px'
                         flexDir='column'
                         marginLeft='20px'
-
                     >
-                        <Box
-                            display="flex"
-                            justifyContent="center"
-                            width="100%"
-                            height="auto"
-                            minHeight="200px"
-                            flexDir="column"
-                            gap="30px"
-                        >
-                            <Text
-                                as='h4'
-                                fontSize='xx-large'
-                                fontWeight="700"
-                            >
-                                Metatrader 5
-                            </Text>
-                            <Text as='p'>
-                                Opera de manera más eficiente con MT5 en Zeven:
-                                Plataforma potente, premiada, para un trading rápido, eficaz y seguro.
-                            </Text>
-                        </Box>
-                        <Box
-                            display="flex"
-                            justifyContent="center"
-                            width="100%"
-                            height="auto"
-                            minHeight="200px"
-                            flexDir="column"
-                            gap="30px"
-                        >
-                            <Text
-                                as='h4'
-                                fontSize='xx-large'
-                                fontWeight="700"
-                            >
-                                Metatrader 5
-                            </Text>
-                            <Text as='p'>
-                                Opera de manera más eficiente con MT5 en Zeven:
-                                Plataforma potente, premiada, para un trading rápido, eficaz y seguro.
-                            </Text>
-                        </Box>
-                        <Box
-                            display="flex"
-                            justifyContent="center"
-                            width="100%"
-                            height="auto"
-                            minHeight="200px"
-                            flexDir="column"
-                            gap="30px"
-                        >
-                            <Text
-                                as='h4'
-                                fontSize='xx-large'
-                                fontWeight="700"
-                            >
-                                Metatrader 5
-                            </Text>
-                            <Text as='p'>
-                                El calendario económico integrado en MT5 proporciona actualizaciones en tiempo real sobre eventos económicos importantes, ayudando a los traders a mantenerse informados sobre las noticias que mueven el mercado y a tomar decisiones de trading oportunas.
-                            </Text>
-                        </Box>
-                        <Box
-                            display="flex"
-                            justifyContent="center"
-                            width="100%"
-                            height="auto"
-                            minHeight="200px"
-                            flexDir="column"
-                            gap="30px"
-                        >
-                            <Text
-                                as='h4'
-                                fontSize='xx-large'
-                                fontWeight="700"
-                            >
-                                Metatrader 5
-                            </Text>
-                            <Text as='p'>
-                                Opera de manera más eficiente con MT5 en Zeven:
-                                Plataforma potente, premiada, para un trading rápido, eficaz y seguro.
-                            </Text>
-                        </Box>
-                        <Box
-                            ref={Ref}
-                            display="flex"
-                            justifyContent="center"
-                            width="100%"
-                            height="auto"
-                            minHeight="200px"
-                            flexDir="column"
-                            gap="30px"
-                        >
-                            <Text
-                                as='h4'
-                                fontSize='xx-large'
-                                fontWeight="700"
-                            >
-                                Metatrader 5
-                            </Text>
-                            <Text as='p'>
-                                El calendario económico integrado en MT5 proporciona actualizaciones en tiempo real sobre eventos económicos importantes, ayudando a los traders a mantenerse informados sobre las noticias que mueven el mercado y a tomar decisiones de trading oportunas.
-                            </Text>
-                        </Box>
-
+                        {
+                            sectionSix.map((item) => (
+                                <Box
+                                    key={item.id}
+                                    display="flex"
+                                    justifyContent="center"
+                                    width="100%"
+                                    height="auto"
+                                    minHeight="200px"
+                                    flexDir="column"
+                                    gap="30px"
+                                >
+                                    <Text
+                                        as='h4'
+                                        fontSize='xx-large'
+                                        fontWeight="700"
+                                    >
+                                        {item.title}
+                                    </Text>
+                                    <Text as='p'>
+                                        {item.text}
+                                    </Text>
+                                </Box>
+                            ))
+                        }
                     </Box>
-
                 </Box>
             </Box>
             <Box
@@ -220,7 +140,7 @@ const SectionSix = () => {
             >
                 <Image
                     src="/assets/iphone.webp"
-                    alt="Imagen del header"
+                    alt="Imagen seccion six"
                     style={{
                         maxWidth: "450px",
                         maxHeight: "800px"
@@ -229,7 +149,7 @@ const SectionSix = () => {
                     height={600}
                 />
             </Box>
-        </Stack>
+        </Stack >
     );
 }
 

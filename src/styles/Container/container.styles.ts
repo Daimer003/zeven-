@@ -11,8 +11,8 @@ export const BoxZeven = styled(Box)`
   max-height: 750px;
   position: relative;
   z-index: 0;
-  border-radius: 28px;
-  box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  border: 1px solid rgb(64, 79, 87);
   overflow: hidden;
   ::before{
      display: flex;

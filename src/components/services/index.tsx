@@ -1,6 +1,6 @@
 import { Box, HStack, Text } from "@chakra-ui/react";
 import { FiUsers } from "react-icons/fi";
-import { BiSupport } from "react-icons/bi";
+import { headerServices } from "@/utils/Data/data";
 
 
 const Services = () => {
@@ -14,187 +14,66 @@ const Services = () => {
             overflow="auto"
         >
             <HStack spacing='24px' w="100%">
-                <Box
-                    display="flex"
-                    flexDir="column"
-                    justifyContent="center"
-                    alignItems="center"
-                    w='100%'
-                    minW='200px'
-                    minHeight='140px'
-                    bg='rgba(255, 255, 255, 0.08)'
-                    padding="10px"
-                    boxSizing="border-box"
-                    borderRadius="8px"
-                >
-                    <Box
-                        display="flex"
-                        gap="10px"
-                    >
-                        <FiUsers
-                            color="white"
-                            size="28px"
-                        />
-                        <Text
-                            as="span"
-                            fontSize="x-large"
-                            color="white"
-                        >
-                            1000+
-                        </Text>
-                    </Box>
-                    <Text
-                        as="span"
-                        color="white"
-                    >
-                        Instrumentos
-                        de trading
-                    </Text>
-                </Box>
-                <Box
-                    display="flex"
-                    flexDir="column"
-                    justifyContent="center"
-                    alignItems="center"
-                    w='100%'
-                    minHeight='140px'
-                    bg='rgba(255, 255, 255, 0.08)'
-                    padding="10px"
-                    boxSizing="border-box"
-                    borderRadius="8px"
-                >
-                    <Box
-                        display="flex"
-                        gap="10px"
-                    >
-                        <BiSupport
-                            size="28px"
-                            color="white"
-                        />
-                        <Text
-                            as="span"
-                            fontSize="x-large"
-                            color="white"
-                        >
-                            0.0
-                        </Text>
-                    </Box>
-                    <Text
-                        as="span"
-                        color="white"
-                    >
-                        Instrumentos
-                        de trading
-                    </Text>
-                </Box>
-                <Box
-                    display="flex"
-                    flexDir="column"
-                    justifyContent="center"
-                    alignItems="center"
-                    w='100%'
-                    minHeight='140px'
-                    bg='rgba(255, 255, 255, 0.08)'
-                    padding="10px"
-                    boxSizing="border-box"
-                    borderRadius="8px"
-                >
-                    <Box
-                        display="flex"
-                        gap="10px"
-                    >
-                        <BiSupport
-                            size="28px"
-                            color="white"
-                        />
-                        <Text
-                            as="span"
-                            fontSize="x-large"
-                            color="white"
-                        >
-                            24/7
-                        </Text>
-                    </Box>
-                    <Text
-                        as="span"
-                        textAlign="center"
-                        color="white"
-                    >
-                        Trading de  CFDs
-                        sobre criptodivisas
-                    </Text>
-                </Box>
-                <Box
-                    display="flex"
-                    flexDir="column"
-                    justifyContent="center"
-                    alignItems="center"
-                    w='100%'
-                    minHeight='140px'
-                    bg='rgba(255, 255, 255, 0.08)'
-                    padding="10px"
-                    boxSizing="border-box"
-                    borderRadius="8px"
-                >
-                    <Box
-                        display="flex"
-                        gap="10px"
-                    >
-                        <FiUsers
-                            size="28px"
-                            color="white"
-                        />
-                        <Text
-                            as="span"
-                            fontSize="x-large"
-                            color="white"
-                        >
-                            1000:1
-                        </Text>
-                    </Box>
-                    <Text
-                        as="span"
-                        color="white"
-                    >
-                        De apalancamiento
-                    </Text>
-                </Box>
-                <Box
-                    display="flex"
-                    flexDir="column"
-                    justifyContent="center"
-                    alignItems="center"
-                    w='100%'
-                    minHeight='140px'
-                    bg='rgba(255, 255, 255, 0.08)'
-                    padding="10px"
-                    boxSizing="border-box"
-                    borderRadius="8px"
-                >
-                    <Box
-                        display="flex"
-                        gap="10px"
-                    >
-                        <FiUsers
-                            size="28px"
-                            color="white"
-                        />
-                        <Text
-                            as="span"
-                            fontSize="x-large"
-                            color="white"
-                        >
-                            0%
-                        </Text>
-                    </Box>
-                    <Text
-                        as="span"
-                        color="white"
-                    >
-                        Comisión
-                        por deposito
-                    </Text>
-                </Box>
+                {
+                    headerServices.map((service, index) => (
+                        <>
+                            <Box
+                                key={index}
+                                display="flex"
+                                flexDir="column"
+                                justifyContent="center"
+                                alignItems="center"
+                                w='100%'
+                                minW='200px'
+                                minHeight='140px'
+                                // bg='rgba(255, 255, 255, 0.08)'
+                                padding="10px"
+                                boxSizing="border-box"
+                                borderRadius="8px"
+                            >
+                                <Box
+                                    display="flex"
+                                    gap="10px"
+                                >
+                                    <FiUsers
+                                        color="white"
+                                        size="28px"
+                                    />
+                                    <Text
+                                        as="span"
+                                        fontSize="x-large"
+                                        fontWeight="500"
+                                        color="white"
+                                        textAlign="center"
+                                    >
+                                        {service.title}
+                                    </Text>
+                                </Box>
+                                <Text
+                                    as="span"
+                                    color="white"
+                                    textAlign="center"
+                                >
+                                    {service.text}
+                                </Text>
+                            </Box>
+                            {
+                                index <= 3 &&
+                                <Box
+                                    display='flex'
+                                    minWidth="2px"
+                                    width='3px'
+                                    height='140px'
+                                    content=""
+                                    position='relative'
+                                    bgGradient='linear( #0000006a, #ffffff, #0000007d)'
+                                    zIndex='999'
+                                />
+                            }
+                        </>
+
+                    ))
+                }
 
             </HStack>
         </Box>

@@ -22,6 +22,7 @@ import {
 import Image from "next/image";
 import { HamburgerIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
+import ThemeToggleButton from "@/components/modeDark/theme-toggle-button";
 
 
 const Navbar = () => {
@@ -73,19 +74,44 @@ const Navbar = () => {
                         alignItems="center"
                         gap="40px"
                     >
-                        <Link href="/works" color="#fff" >
+                        <Link
+                            href="/works"
+                            color="gray.200"
+                            fontWeight="600"
+                            fontSize="large"
+                        >
                             Opera con nosotros
                         </Link>
-                        <Link href="/works" color="#fff" >
+                        <Link
+                            href="/works"
+                            color="gray.200"
+                            fontWeight="600"
+                            fontSize="large"
+                        >
                             Plataformas
                         </Link>
-                        <Link href="/works" color="#fff" >
+                        <Link
+                            href="/works"
+                            color="gray.200"
+                            fontWeight="600"
+                            fontSize="large"
+                        >
                             Programa IB
                         </Link>
-                        <Link href="/works" color="#fff" >
+                        <Link
+                            href="/works"
+                            color="gray.200"
+                            fontWeight="600"
+                            fontSize="large"
+                        >
                             Educación
                         </Link>
-                        <Link href="/recommendations" color="#fff" >
+                        <Link
+                            href="/works"
+                            color="gray.200"
+                            fontWeight="600"
+                            fontSize="large"
+                        >
                             Empresa
                         </Link>
                     </Stack>
@@ -103,7 +129,7 @@ const Navbar = () => {
                         >
                             Registrarse
                         </Button>
-
+                        <ThemeToggleButton />
                     </ButtonGroup>
                 </Box>
                 <Menu >
@@ -163,6 +189,7 @@ const Navbar = () => {
                                 >
                                     Registrarse
                                 </Button>
+
                             </DrawerFooter>
                         </DrawerContent>
                     </Drawer>

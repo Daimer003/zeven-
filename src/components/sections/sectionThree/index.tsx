@@ -47,7 +47,12 @@ const SectionThree = () => {
             >
                 {
                     imgAliado.map((id: any, index: any) => (
-                        <GridItem key={index} w='100%' h='auto' >
+                        <GridItem
+                            key={index}
+                            w='100%'
+                            h='auto'
+                            _hover={{ transform: 'scale(1.1)', transition: 'all 0.2s' }}
+                        >
                             <Image
                                 src={`/assets/aliados/aliado-${id}.webp`}
                                 alt={`Imagen aliados-${id}`}

@@ -15,7 +15,7 @@ interface Props {
 const CardPrices = ({ select, dataPrice }: Props) => {
     return (
         <BoxCard
-            maxWidth={{ base: "320px", md: "300px" }}
+            maxWidth="345px"
             transform='scale(1)'
             transition="all .5s"
             _hover={{ transform: 'scale(0.96)' }}

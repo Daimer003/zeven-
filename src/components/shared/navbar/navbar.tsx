@@ -48,7 +48,7 @@ const Navbar = () => {
             <Box
                 display='flex'
                 width="100%"
-                maxWidth='1400px'
+                maxWidth='1145px'
             >
                 <Box
                     display="flex"

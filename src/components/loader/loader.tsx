@@ -7,7 +7,12 @@ const Loader = () => {
             display="flex"
             justifyContent="center"
             alignItems="center"
+            width="100%"
             height="100vh"
+            position="absolute"
+            top="0"
+            background="black"
+            zIndex={9999}
         >
             <Spinner size="xl" />
         </Box>

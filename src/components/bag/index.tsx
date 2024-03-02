@@ -7,8 +7,9 @@ import {
 import Image from "next/image";
 import CardBag from "../cards/cardBag";
 
-
 const Bag = () => {
+
+
     return (
         <BoxZeven>
             <Box

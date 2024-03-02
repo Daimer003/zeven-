@@ -8,10 +8,9 @@ export const BoxCardLayout = styled(Box)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   position: relative;
-  margin: auto;
   z-index: 0;
   border: 1px solid rgb(64, 79, 87) ;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.9);

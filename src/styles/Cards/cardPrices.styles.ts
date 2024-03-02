@@ -7,7 +7,6 @@ export const BoxCard = styled(Box)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
   min-width: 250px;
   height: auto;
   position: relative;

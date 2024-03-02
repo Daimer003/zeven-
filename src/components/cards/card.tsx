@@ -14,6 +14,7 @@ const Card = ({ children }: Props) => {
                 display="flex"
                 flexDirection="column"
                 alignItems="center"
+                padding="10px"
             >
                 {children}
             </Box>

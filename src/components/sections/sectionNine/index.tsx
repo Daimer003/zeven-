@@ -12,12 +12,14 @@ import { FaArrowRight } from "react-icons/fa6";
 import { FaUserPlus } from "react-icons/fa";
 import { PiMoneyFill } from "react-icons/pi";
 import { LuTrendingUp } from "react-icons/lu";
+import { GridItemKeyFrame } from "@/styles/Section/sectionNone/sectionNine.styles";
 
 const icons = [
     <FaUserPlus />,
     <PiMoneyFill />,
     < LuTrendingUp />
 ]
+
 
 const SectionNine = () => {
     const [imgAliado, setImaAliado] = useState<any>([])
@@ -41,7 +43,6 @@ const SectionNine = () => {
             <Box
                 display="flex"
                 width='100%'
-                maxWidth='1000px'
                 flexDir="column"
                 alignItems='center'
                 gap="40px"
@@ -79,23 +80,34 @@ const SectionNine = () => {
                     {
                         [1, 2, 3].map((_, index) => (
                             <>
-                                <Card key={index}>
-                                    <Box
-                                        display="flex"
-                                        flexDir="column"
-                                        justifyContent="center"
-                                        alignItems="center"
-                                        maxWidth="200px"
-                                        height={{ base: "100px", md: "200px" }}
-                                        padding="20px 40px"
-                                        boxSizing="border-box"
-                                        fontSize={{ base: "45px", md: "70px" }}
-                                    >
-                                        {icons[index]}
-                                    </Box>
-                                </Card>
-                                {index <= 1 &&
-                                    <Box fontSize={{ base: "24px", md: "50px" }}>
+                                <Box
+                                    key={index}
+                                    display="flex"
+                                    flexDir="row"
+                                    justifyContent='space-between'
+                                    alignItems="center"
+                                    width="100%"
+                                    maxWidth="223px"
+                                    height={{ base: "100px", md: "167px" }}
+                                >
+                                    <Card >
+                                        <Box
+                                            display="flex"
+                                            flexDir="column"
+                                            justifyContent="center"
+                                            alignItems="center"
+                                            width="100%"
+                                            height="100%"
+                                            boxSizing="border-box"
+                                            fontSize={{ base: "45px", md: "70px" }}
+                                        >
+                                            {icons[index]}
+                                        </Box>
+                                    </Card>
+                                </Box>
+                                {
+                                    index <= 1 &&
+                                    <Box fontSize={{ base: "24px", md: "70px" }}>
                                         <FaArrowRight />
                                     </Box>
                                 }
@@ -112,28 +124,39 @@ const SectionNine = () => {
                     </Button>
                 </Box>
             </Box>
-            <Grid
-                templateColumns={{
-                    base: 'repeat(3, 1fr)',
-                    md: 'repeat(4, 1fr)',
-                    lg: 'repeat(9, 1fr)'
-                }}
+            <Box
+                display="flex"
+                width="100%"
+                height="auto"
                 gap={10}
                 opacity="50%"
+                overflow="hidden"
             >
-                {
-                    imgAliado.map((id: any, index: any) => (
-                        <GridItem key={index} w='100%' h='auto' >
+                <GridItemKeyFrame   >
+                    {
+                        imgAliado.map((id: any, index: any) => (
                             <Image
+                                key={index}
                                 src={`/assets/divisas/divisa-${id}.webp`}
                                 alt={`Imagen divisa-${id}`}
-                                width={80}
-                                height={30} />
-                        </GridItem>
-                    ))
-                }
+                                width={200}
+                                height={50} />
 
-            </Grid>
+                        ))
+                    }
+                    {
+                        imgAliado.map((id: any, index: any) => (
+                            <Image
+                                key={index + 11}
+                                src={`/assets/divisas/divisa-${id}.webp`}
+                                alt={`Imagen divisa-${id}`}
+                                width={200}
+                                height={50} />
+
+                        ))
+                    }
+                </GridItemKeyFrame>
+            </Box>
         </Box>
     );
 }

@@ -1,6 +1,6 @@
 import { Box, HStack, Text } from "@chakra-ui/react";
-import { FiUsers } from "react-icons/fi";
 import { headerServices } from "@/utils/Data/data";
+
 
 
 const Services = () => {
@@ -33,12 +33,15 @@ const Services = () => {
                             >
                                 <Box
                                     display="flex"
+                                    alignItems="center"
                                     gap="10px"
                                 >
-                                    <FiUsers
-                                        color="white"
-                                        size="28px"
-                                    />
+                                    {
+                                        <service.icon
+                                            color="white"
+                                            size="28px"
+                                        />
+                                    }
                                     <Text
                                         as="span"
                                         fontSize="x-large"

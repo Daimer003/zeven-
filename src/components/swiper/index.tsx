@@ -19,7 +19,7 @@ const CarouselSwiper = ({ children, breakpoint, autoPlay }: Props) => {
         <Swiper
             // install Swiper modules
             modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
-            spaceBetween={50}
+            spaceBetween={80}
             slidesPerView={1}
             autoplay={autoPlay}
             breakpoints={{
@@ -27,9 +27,6 @@ const CarouselSwiper = ({ children, breakpoint, autoPlay }: Props) => {
                     slidesPerView: 1,
                 },
                 1024: {
-                    slidesPerView: 2,
-                },
-                1440: {
                     slidesPerView: breakpoint,
                 },
             }}

@@ -25,10 +25,9 @@ const SectionFive = () => {
             width="100%"
             justifyContent="center"
         >
-
             <Box
                 display="flex"
-                maxWidth='1000px'
+                width="100%"
                 flexDir="column"
                 alignItems="center"
                 justifyContent="center"

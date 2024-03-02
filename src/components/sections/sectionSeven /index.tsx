@@ -32,7 +32,6 @@ const SectionSeven = () => {
                 display='flex'
                 justifyContent='center'
                 width='100%'
-                maxWidth='1000px'
                 gap='20px'
             >
                 <CarouselSwiper
@@ -42,36 +41,41 @@ const SectionSeven = () => {
                     {
                         sectionSeven.map(item => (
                             <SwiperSlide key={item.id}>
-                                <Card >
-                                    <Box
-                                        display="flex"
-                                        flexDir="column"
-                                        justifyContent="center"
-                                        alignItems="center"
-                                        maxWidth="300px"
-                                        height="400px"
-                                        padding="20px 40px"
-                                        boxSizing="border-box"
-                                    >
-                                        <Image
-                                            src={item.img}
-                                            alt="Imagen"
-                                            style={{
-                                                maxWidth: "200px",
-                                                maxHeight: "200px"
-                                            }}
-                                            width={300}
-                                            height={300}
-                                        />
-                                        <Text
-                                            as="span"
-                                            fontSize='x-large'
-                                            fontWeight='600'
+                                <Box
+                                    maxWidth="345px"
+                                    height="auto"
+                                    boxSizing="border-box"
+                                    margin="auto"
+                                >
+                                    <Card >
+                                        <Box
+                                            display="flex"
+                                            flexDir="column"
+                                            justifyContent="center"
+                                            alignItems="center"
+                                            width="100%"
+                                            height="539px"
                                         >
-                                            {item.title}
-                                        </Text>
-                                    </Box>
-                                </Card>
+                                            <Image
+                                                src={item.img}
+                                                alt="Imagen"
+                                                style={{
+                                                    maxWidth: "300px",
+                                                    maxHeight: "300px"
+                                                }}
+                                                width={300}
+                                                height={300}
+                                            />
+                                            <Text
+                                                as="span"
+                                                fontSize='x-large'
+                                                fontWeight='600'
+                                            >
+                                                {item.title}
+                                            </Text>
+                                        </Box>
+                                    </Card>
+                                </Box>
                             </SwiperSlide>
                         ))
 

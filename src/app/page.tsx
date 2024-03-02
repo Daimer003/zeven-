@@ -16,7 +16,7 @@ import SectionSeven from "@/components/sections/sectionSeven ";
 import SectionEight from "@/components/sections/sectionEight";
 import SectionNine from "@/components/sections/sectionNine";
 import SectionTen from "@/components/sections/sectionTen";
-
+import Footer from "@/components/shared/footer";
 
 export default function Home() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -32,34 +32,47 @@ export default function Home() {
   }, []);
 
   return (
-    <Container
+    <Box
       display="flex"
+      flexDir="column"
       justifyContent="center"
-      maxW='10xl'
-      overflow="hidden"
-      padding="0 20px"
-      boxSizing="border-box"
+      width="100%"
     >
-      {
-        loading ?
-          <Loader /> :
-          <Box
-            width="100%"
-            maxW="1400px"
-          >
-            <Navbar />
-            <Header />
-            <SectionTwo />
-            <SectionThree />
-            <SectionFour />
-            <SectionFive />
-            <SectionSix />
-            <SectionSeven />
-            <SectionEight />
-            <SectionNine />
-            <SectionTen />
-          </Box>
-      }
-    </Container>
+      <Box
+        display="flex"
+        flexDir="column"
+        width="100%"
+        justifyContent="center"
+        alignItems="center"
+        overflow="hidden"
+        padding="0 20px"
+        boxSizing="border-box"
+      >
+        {
+          loading ?
+            <Loader /> :
+            <>
+              <Box
+                width="100%"
+                maxW="1196px"
+              >
+                <Navbar />
+                <Header />
+                <SectionTwo />
+                <SectionThree />
+                <SectionFour />
+                <SectionFive />
+                <SectionSix />
+                <SectionSeven />
+                <SectionEight />
+                <SectionNine />
+                <SectionTen />
+              </Box>
+              <Footer />
+            </>
+        }
+      </Box>
+
+    </Box>
   );
 }

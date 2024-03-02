@@ -37,7 +37,6 @@ const SectionEight = () => {
                 display='flex'
                 justifyContent='center'
                 width='100%'
-                maxWidth='1000px'
                 gap='20px'
             >
                 <CarouselSwiper
@@ -47,45 +46,49 @@ const SectionEight = () => {
                     {
                         sectionEight.map(item => (
                             <SwiperSlide key={item.id}>
-                                <Card >
-                                    <Box
-                                        display="flex"
-                                        flexDir="column"
-                                        justifyContent="center"
-                                        alignItems="center"
-                                        maxWidth="300px"
-                                        height="500px"
-                                        padding="20px 40px"
-                                        boxSizing="border-box"
-                                    >
-                                        <Image
-                                            src={item.img}
-                                            alt="Imagen"
-                                            style={{
-                                                maxWidth: "200px",
-                                                maxHeight: "200px"
-                                            }}
-                                            width={300}
-                                            height={300}
-                                        />
-                                        <Text
-                                            as="h5"
-                                            fontSize='x-large'
-                                            fontWeight='600'
-                                            textAlign="center"
+                                <Box
+                                    maxWidth="345px"
+                                    height="auto"
+                                    boxSizing="border-box"
+                                    margin="auto"
+                                >
+                                    <Card >
+                                        <Box
+                                            display="flex"
+                                            flexDir="column"
+                                            justifyContent="center"
+                                            alignItems="center"
+                                            height="539px"
                                         >
-                                            {item.title}
-                                        </Text>
-                                        <Text
-                                            as="p"
-                                            fontSize='large'
-                                            fontWeight='300'
-                                            textAlign="center"
-                                        >
-                                            {item.paragraph}
-                                        </Text>
-                                    </Box>
-                                </Card>
+                                            <Image
+                                                src={item.img}
+                                                alt="Imagen"
+                                                style={{
+                                                    maxWidth: "300px",
+                                                    maxHeight: "300px"
+                                                }}
+                                                width={300}
+                                                height={300}
+                                            />
+                                            <Text
+                                                as="h5"
+                                                fontSize='x-large'
+                                                fontWeight='600'
+                                                textAlign="center"
+                                            >
+                                                {item.title}
+                                            </Text>
+                                            <Text
+                                                as="p"
+                                                fontSize='large'
+                                                fontWeight='300'
+                                                textAlign="center"
+                                            >
+                                                {item.paragraph}
+                                            </Text>
+                                        </Box>
+                                    </Card>
+                                </Box>
                             </SwiperSlide>
                         ))
                     }

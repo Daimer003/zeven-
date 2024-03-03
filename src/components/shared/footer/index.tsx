@@ -4,7 +4,7 @@ import { TbBrandLinkedin } from "react-icons/tb";
 import { FaInstagram } from "react-icons/fa";
 import { TfiTwitter } from "react-icons/tfi";
 import { dataContract } from "@/utils/Data/data";
-
+import parse from "html-react-parser";
 
 const Footer = () => {
     return (
@@ -18,7 +18,7 @@ const Footer = () => {
             padding="40px 20px"
             boxSizing="border-box"
             gap="60px"
-            zIndex="9999"
+            zIndex="999"
         >
             <Box
                 display="flex"
@@ -173,7 +173,7 @@ const Footer = () => {
                     as="p"
                     color="white"
                 >
-                    {dataContract.warning}
+                    {parse(dataContract.warning)}
                 </Text>
             </Box>
         </Box>

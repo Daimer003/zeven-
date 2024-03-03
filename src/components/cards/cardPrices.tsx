@@ -6,6 +6,7 @@ import {
     Stack,
     Button
 } from "@chakra-ui/react";
+import Link from "next/link";
 
 interface Props {
     select: boolean,
@@ -42,7 +43,6 @@ const CardPrices = ({ select, dataPrice }: Props) => {
                         </Text>
                         <Heading
                             size='lg'
-                            textTransform='uppercase'
                             color="white"
                         >
                             {dataPrice.value1}
@@ -58,7 +58,6 @@ const CardPrices = ({ select, dataPrice }: Props) => {
                         </Text>
                         <Heading
                             size='lg'
-                            textTransform='uppercase'
                             color="white"
                         >
                             {dataPrice.value2}
@@ -74,7 +73,6 @@ const CardPrices = ({ select, dataPrice }: Props) => {
                         </Text>
                         <Heading
                             size='lg'
-                            textTransform='uppercase'
                             color="white"
                         >
                             {dataPrice.value3}
@@ -90,7 +88,6 @@ const CardPrices = ({ select, dataPrice }: Props) => {
                         </Text>
                         <Heading
                             size='lg'
-                            textTransform='uppercase'
                             color="white"
                         >
                             {dataPrice.value4}
@@ -106,7 +103,6 @@ const CardPrices = ({ select, dataPrice }: Props) => {
                         </Text>
                         <Heading
                             size='lg'
-                            textTransform='uppercase'
                             color="white"
                         >
                             {dataPrice.value5}
@@ -122,19 +118,28 @@ const CardPrices = ({ select, dataPrice }: Props) => {
                         </Text>
                         <Heading
                             size='lg'
-                            textTransform='uppercase'
                             color="white"
                         >
                             {dataPrice.value6}
                         </Heading>
                     </Box>
                 </Stack>
-                <Button
-                    colorScheme='black'
-                    variant="buttonPrimary"
+                <Link
+                    href="https://app.zevenglobal.com/user-auth/register"
+                    target="_blank"
                 >
-                    Invierte ahora
-                </Button>
+
+                    <Button
+                        display="flex"
+                        width="100%"
+                        colorScheme='black'
+                        variant="buttonPrimary"
+                        zIndex={999}
+
+                    >
+                        Invierte ahora
+                    </Button>
+                </Link>
             </BoxBody>
         </BoxCard>
     );

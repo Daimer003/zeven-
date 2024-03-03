@@ -25,6 +25,7 @@ import NextLink from 'next/link'
 import ThemeToggleButton from "@/components/modeDark/theme-toggle-button";
 
 
+
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef<any>()
@@ -43,7 +44,7 @@ const Navbar = () => {
             css={{ backdropFilter: 'blur(10px)' }}
             position="fixed"
             left='0'
-            zIndex="99999"
+            zIndex="9999"
         >
             <Box
                 display='flex'
@@ -116,23 +117,31 @@ const Navbar = () => {
                         </Link>
                     </Stack>
                     <ButtonGroup gap='4'>
-                        <Button
-                            colorScheme='black'
-                            variant="buttonPrimary"
-                        >
-                            Iniciar sesión
-                        </Button>
-                        <Button
-                            colorScheme='gray'
-                            variant="buttonSecondary"
-                            borderRadius='4px'
-                        >
-                            Registrarse
-                        </Button>
+                        <Link
+                            href="https://app.zevenglobal.com/user-auth/login"
+                            target="_blank">
+                            <Button
+                                colorScheme='black'
+                                variant="buttonPrimary"
+                            >
+                                Iniciar sesión
+                            </Button>
+                        </Link>
+                        <Link
+                            href="https://app.zevenglobal.com/user-auth/register"
+                            target="_blank">
+                            <Button
+                                colorScheme='gray'
+                                variant="buttonSecondary"
+                                borderRadius='4px'
+                            >
+                                Registrarse
+                            </Button>
+                        </Link>
                         <ThemeToggleButton />
                     </ButtonGroup>
                 </Box>
-                <Menu >
+                <Menu  >
                     <MenuButton
                         display={{ base: 'flex', xl: 'none' }}
                         color="white"
@@ -148,15 +157,16 @@ const Navbar = () => {
                         placement='right'
                         onClose={onClose}
                         finalFocusRef={btnRef}
+
                     >
                         <DrawerOverlay />
-                        <DrawerContent bg="black">
+                        <DrawerContent bg="black" >
                             <DrawerCloseButton />
                             <DrawerBody
                                 display='flex'
                                 flexDir='column'
                                 gap='20px'
-                                marginTop='40px'
+                                marginTop='80px'
                             >
                                 <Link as={NextLink} href='/home' color='white'>
                                     Opera con nosotros
@@ -173,24 +183,32 @@ const Navbar = () => {
                                 <Link as={NextLink} href='/home' color='white'>
                                     Empresa
                                 </Link>
+                                <ThemeToggleButton />
                             </DrawerBody>
 
                             <DrawerFooter>
-                                <Button
-                                    colorScheme='black'
-                                    variant="buttonPrimary"
-                                    mr={3} onClick={onClose}
-                                >
-                                    Iniciar sesión
-                                </Button>
-                                <Button
-                                    colorScheme='gray'
-                                    variant="buttonSecondary"
-                                    borderRadius='4px'
-                                >
-                                    Registrarse
-                                </Button>
-
+                                <Link
+                                    href="https://app.zevenglobal.com/user-auth/login"
+                                    target="_blank">
+                                    <Button
+                                        colorScheme='black'
+                                        variant="buttonPrimary"
+                                        mr={3} onClick={onClose}
+                                    >
+                                        Iniciar sesión
+                                    </Button>
+                                </Link>
+                                <Link
+                                    href="https://app.zevenglobal.com/user-auth/register"
+                                    target="_blank">
+                                    <Button
+                                        colorScheme='gray'
+                                        variant="buttonSecondary"
+                                        borderRadius='4px'
+                                    >
+                                        Registrarse
+                                    </Button>
+                                </Link>
                             </DrawerFooter>
                         </DrawerContent>
                     </Drawer>

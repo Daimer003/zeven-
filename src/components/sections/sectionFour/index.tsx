@@ -1,5 +1,4 @@
 import Bag from "@/components/bag";
-import CarouselSwiper from "@/components/swiper";
 import { ServiceForex } from "@/services/service.forex";
 import {
     Box,
@@ -7,19 +6,18 @@ import {
     Button
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { SwiperSlide } from "swiper/react";
-
 
 const SectionFour = () => {
     const [quotes, setQuotes] = useState<any>()
-
+    const [bag, setBag] = useState<string>('Forex')
     const dataForex = [
         {
             id: 1,
             title: "Forex",
             text: "Ingrese al comercio de divisas ahora. Aprenda, opere en la cuenta demo y únase a uno de los mercados financieros más grandes.",
             img: "/assets/forex1.webp",
-            symbol: ["USDEUR", "USDGBP", "USDGBP"],
+            flag: ["/assets/svgs/icon-us.svg", "/assets/svgs/icon-gbp.svg", "/assets/svgs/icon-jpy.svg"],
+            symbol: ["EURUSD", "EURGBP", "EURJPY"],
             currency: [quotes?.USDEUR, quotes?.USDGBP, quotes?.USDAUD]
         },
         {
@@ -27,6 +25,7 @@ const SectionFour = () => {
             title: "Crypto",
             text: "Descubre oportunidades ilimitadas de trading en el mercado en expansión más grandes del mundo",
             img: "/assets/forex2.webp",
+            flag: ["/assets/svgs/icon-btc.svg"],
             symbol: ["USDBTC"],
             currency: [quotes?.USDBTC]
         },
@@ -35,6 +34,7 @@ const SectionFour = () => {
             title: "Acciones",
             text: "Únete a nosotros y descubre oportunidades sin límites en los mercados financieros.",
             img: "/assets/forex3.webp",
+            flag: ["/assets/svgs/icon-us.svg", "/assets/svgs/icon-us.svg"],
             symbol: ["USDEUR", "USDGBP"],
             currency: [quotes?.USDEUR, quotes?.USDGBP,]
         },
@@ -43,6 +43,7 @@ const SectionFour = () => {
             title: "Metales",
             text: "Te proporcionamos las herramientas necesarias para sacar el máximo provecho de este emocionante mercado y en constante crecimiento",
             img: "/assets/forex4.webp",
+            flag: ["/assets/svgs/icon-us.svg", "/assets/svgs/icon-us.svg"],
             symbol: ["USDEUR", "USDGBP"],
             currency: [quotes?.USDEUR, quotes?.USDGBP,]
         }
@@ -50,11 +51,11 @@ const SectionFour = () => {
 
     //*Se ejecuta el llamado cuando carga el componete
     useEffect(() => {
-        (async () => {
+        const getData = async () => {
             const res = await ServiceForex.getForex()
             setQuotes(res?.cachedData.quotes)
-
-        })()
+        }
+        getData()
     }, [])
 
     return (
@@ -104,25 +105,28 @@ const SectionFour = () => {
                 <Button
                     width="100%"
                     colorScheme='black'
-                    variant="buttonPrimary"
+                    variant={bag == "Forex" ? "buttonPrimary" : "buttonSecondary"}
+                    onClick={() => setBag("Forex")}
                 >
                     Forex
                 </Button>
                 <Button
                     width="100%"
                     colorScheme='gray'
-                    variant="buttonSecondary"
+                    variant={bag == "Crypto" ? "buttonPrimary" : "buttonSecondary"}
                     borderRadius='4px'
+                    onClick={() => setBag("Crypto")}
                 >
                     Crypto
                 </Button>
                 <Button
                     width="100%"
                     colorScheme='gray'
-                    variant="buttonSecondary"
+                    variant={bag == "Metales" ? "buttonPrimary" : "buttonSecondary"}
                     borderRadius='4px'
+                    onClick={() => setBag("Metales")}
                 >
-                    Acciones
+                    Metales
                 </Button>
             </Box>
             <Box
@@ -130,7 +134,17 @@ const SectionFour = () => {
                 width="100%"
                 height='auto'
             >
-                <CarouselSwiper breakpoint={1} autoPlay={false}>
+                {
+                    dataForex.map((item, index) => {
+                        if (bag == item.title) {
+                            return (
+                                <Bag key={index} details={item} />
+                            )
+                        }
+
+                    })
+                }
+                {/* <CarouselSwiper breakpoint={1} autoPlay={false}>
                     {
                         dataForex.map((item, index) => (
                             <SwiperSlide key={index}>
@@ -138,7 +152,7 @@ const SectionFour = () => {
                             </SwiperSlide>
                         ))
                     }
-                </CarouselSwiper>
+                </CarouselSwiper> */}
             </Box>
         </Box>
     );

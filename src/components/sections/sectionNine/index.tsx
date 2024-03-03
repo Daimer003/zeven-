@@ -13,6 +13,7 @@ import { FaUserPlus } from "react-icons/fa";
 import { PiMoneyFill } from "react-icons/pi";
 import { LuTrendingUp } from "react-icons/lu";
 import { GridItemKeyFrame } from "@/styles/Section/sectionNone/sectionNine.styles";
+import Link from "next/link";
 
 const icons = [
     <FaUserPlus />,
@@ -94,7 +95,26 @@ const SectionNine = () => {
                                     width="100%"
                                     maxWidth="223px"
                                     height={{ base: "100px", md: "167px" }}
+                                    position="relative"
                                 >
+                                    <Box
+                                        display="flex"
+                                        justifyContent="center"
+                                        alignItems="center"
+                                        width="40px"
+                                        height="40px"
+                                        position="absolute"
+                                        background="gray.800"
+                                        borderRadius="50%"
+                                        top="-20px"
+                                        left="-10px"
+                                        fontSize="x-large"
+                                        fontWeight="700"
+                                        color="white"
+                                        zIndex="99"
+                                    >
+                                        {index + 1}
+                                    </Box>
                                     <Card >
                                         <Box
                                             display="flex"
@@ -125,12 +145,16 @@ const SectionNine = () => {
                     }
                 </Box>
                 <Box>
-                    <Button
-                        colorScheme='black'
-                        variant="buttonPrimary"
-                    >
-                        Comienza a operar ahora
-                    </Button>
+                    <Link
+                        href="https://app.zevenglobal.com/user-auth/register"
+                        target="_blank">
+                        <Button
+                            colorScheme='black'
+                            variant="buttonPrimary"
+                        >
+                            Comienza a operar ahora
+                        </Button>
+                    </Link>
                 </Box>
             </Box>
             <Box

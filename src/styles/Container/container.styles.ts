@@ -23,6 +23,7 @@ export const BoxZeven = styled(Box)`
      background: rgb(245,245,245);
      background: linear-gradient(0deg, rgba(245,245,245,0) 30%, rgba(108,108,108,0.20634191176470584) 100%);
      top: 0;
+     z-index: 0;
   }
   ::after{
      display: flex;
@@ -33,5 +34,6 @@ export const BoxZeven = styled(Box)`
      background: rgb(245,245,245);
      background: linear-gradient(180deg, rgba(245,245,245,0) 30%, rgba(108,108,108,0.20634191176470584) 100%);
      bottom: 0;
+     z-index: -1;
   }
 `;

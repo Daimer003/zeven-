@@ -31,6 +31,7 @@ const Bag = ({ details }: Props) => {
                     flexDir={{ base: "column", md: "row" }}
                     width="100%"
                     height="auto"
+                    minHeight="350px"
                 >
                     <Box
                         display="flex"
@@ -38,6 +39,7 @@ const Bag = ({ details }: Props) => {
                         justifyContent="center"
                         gap="20px"
                         minH="220px"
+                        marginLeft={{ base: "20px", md: "40px" }}
                     >
                         <Text
                             as="h4"
@@ -55,6 +57,8 @@ const Bag = ({ details }: Props) => {
                             colorScheme='gray'
                             variant="buttonPrimary"
                             borderRadius='4px'
+                            maxW="200px"
+                            marginTop="20px"
                         >
                             Invierte ahora
                         </Button>
@@ -83,6 +87,7 @@ const Bag = ({ details }: Props) => {
                             <CardBag
                                 key={index}
                                 currencies={details.symbol[index]}
+                                flag={details.flag[index]}
                                 value={item} />
                         ))
                     }

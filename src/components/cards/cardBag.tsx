@@ -10,10 +10,11 @@ import Image from "next/image";
 
 interface Props {
     value: string,
-    currencies: any
+    currencies: any,
+    flag: any
 }
 
-const CardBag = ({ currencies, value }: Props) => {
+const CardBag = ({ currencies, value, flag }: Props) => {
     return (
         <Box
             display="flex"
@@ -27,6 +28,9 @@ const CardBag = ({ currencies, value }: Props) => {
             position="relative"
             zIndex="999"
             gap="20px"
+            border="1px"
+            borderColor="rgb(64, 79, 87)"
+
         >
             <Box
                 display="flex"
@@ -40,15 +44,16 @@ const CardBag = ({ currencies, value }: Props) => {
                     <HStack
                         display="flex"
                         justifyContent="center"
-                        border="1px"
                         borderRadius="6px"
-                        borderColor="white"
+                        border="1px"
+                        borderColor="rgb(64, 79, 87)"
                         padding="6px"
                         alignItems="center"
                         width="60px"
+                        height="auto"
                     >
                         <Image
-                            src="/assets/svgs/icon-us.svg"
+                            src={flag}
                             alt="Icono de pais"
                             width={30}
                             height={30} />
@@ -56,6 +61,7 @@ const CardBag = ({ currencies, value }: Props) => {
                     <Box
                         display="flex"
                         flexDir="column"
+                        justifyContent="center"
                     >
                         <Text
                             as="span"

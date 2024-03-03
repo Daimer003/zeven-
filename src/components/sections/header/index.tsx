@@ -86,23 +86,29 @@ const Header = () => {
                         width="100%"
                         maxWidth="410px"
                     >
-                        <Link href="">
+                        <Link
+                            href="https://app.zevenglobal.com/user-auth/register"
+                            target="_blank"
+                        >
                             <Button
                                 colorScheme='black'
                                 w={{ base: '150px', md: '200px' }}
                                 variant="buttonPrimary"
                             >
-                                Iniciar sesión
+                                Abre una cuenta REAL
                             </Button>
                         </Link>
-                        <Link href="" >
+                        <Link
+                            href="https://app.zevenglobal.com/user-auth/register"
+                            target="_blank"
+                        >
                             <Button
                                 colorScheme='gray'
                                 w={{ base: '150px', md: '200px' }}
                                 variant="buttonSecondary"
                                 borderRadius='4px'
                             >
-                                Registrarse
+                                Abre una cuenta DEMO
                             </Button>
                         </Link>
                     </Box>

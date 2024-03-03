@@ -10,8 +10,12 @@ export class ServiceForex {
                     'Accept': 'application/json',
                     'content-type': 'aplication/json',
                 },
-            })
+
+            }
+
+            )
             const res = await response.json()
+            console.log(res)
             return res
         } catch (error) {
             console.log(error)

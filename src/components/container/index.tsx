@@ -58,6 +58,7 @@ const ContainerZeven = ({ title, img }: Props) => {
                             </Button>
                             <Text
                                 textAlign={{ base: "center", md: "start" }}
+                                color="white"
                                 as="p"
                             >
                                 *Aplican términos y condiciones

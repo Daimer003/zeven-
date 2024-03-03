@@ -75,6 +75,7 @@ const SectionEight = () => {
                                                 fontSize='x-large'
                                                 fontWeight='600'
                                                 textAlign="center"
+                                                color="white"
                                             >
                                                 {item.title}
                                             </Text>
@@ -83,6 +84,7 @@ const SectionEight = () => {
                                                 fontSize='large'
                                                 fontWeight='300'
                                                 textAlign="center"
+                                                color="white"
                                             >
                                                 {item.paragraph}
                                             </Text>
@@ -94,7 +96,13 @@ const SectionEight = () => {
                     }
                 </CarouselSwiper>
             </Box >
-            <Text as="p">*Los precios son solamente para propósitos indicativos basados en los spreads de cuentas en MT5.</Text>
+            <Text
+                as="p"
+                color="white"
+                textAlign="center"
+            >
+                *Los precios son solamente para propósitos indicativos basados en los spreads de cuentas en MT5.
+            </Text>
         </Box >
     );
 }

@@ -7,8 +7,12 @@ import {
 import Image from "next/image";
 import CardBag from "../cards/cardBag";
 
-const Bag = () => {
 
+interface Props {
+    details: any,
+}
+
+const Bag = ({ details }: Props) => {
 
     return (
         <BoxZeven>
@@ -33,21 +37,19 @@ const Bag = () => {
                         flexDir="column"
                         justifyContent="center"
                         gap="20px"
+                        minH="220px"
                     >
                         <Text
                             as="h4"
                             fontSize="xxx-large"
                             fontWeight="600"
                             color="white"
-                        >Forex</Text>
+                        >{details.title}</Text>
                         <Text
                             as="p"
                             color="white"
                         >
-                            Ingrese al comercio de divisas ahora.
-                            Aprenda, opere en la cuenta demo
-                            y únase a uno de los mercados
-                            financieros más grandes.
+                            {details.text}
                         </Text>
                         <Button
                             colorScheme='gray'
@@ -63,14 +65,10 @@ const Bag = () => {
                         width="100%"
                     >
                         <Image
-                            src="/assets/imagen2.webp"
+                            src={details.img}
                             alt="Imagen del header"
-                            style={{
-                                maxWidth: "400px",
-                                maxHeight: "400px"
-                            }}
-                            width={600}
-                            height={600}
+                            width={400}
+                            height={300}
                         />
                     </Box>
                 </Box>
@@ -80,8 +78,15 @@ const Bag = () => {
                     gap="20px"
                     overflowX="auto"
                 >
-                    <CardBag />
-                    <CardBag />
+                    {
+                        details?.currency.map((item: any, index: any) => (
+                            <CardBag
+                                key={index}
+                                currencies={details.symbol[index]}
+                                value={item} />
+                        ))
+                    }
+
                 </Box>
             </Box>
         </BoxZeven>

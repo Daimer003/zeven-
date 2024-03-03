@@ -43,7 +43,7 @@ const Navbar = () => {
             css={{ backdropFilter: 'blur(10px)' }}
             position="fixed"
             left='0'
-            zIndex="999"
+            zIndex="99999"
         >
             <Box
                 display='flex'
@@ -75,7 +75,7 @@ const Navbar = () => {
                         gap="40px"
                     >
                         <Link
-                            href="/works"
+                            href="#header"
                             color="gray.200"
                             fontWeight="600"
                             fontSize="large"
@@ -135,6 +135,7 @@ const Navbar = () => {
                 <Menu >
                     <MenuButton
                         display={{ base: 'flex', xl: 'none' }}
+                        color="white"
                         as={IconButton}
                         aria-label='Options'
                         icon={<HamburgerIcon />}

@@ -32,7 +32,7 @@ const CarouselSwiper = ({ children, breakpoint, autoPlay }: Props) => {
             }}
             navigation
             pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}
+            // scrollbar={{ draggable: true }}
             onSwiper={(swiper) => swiper}
         // onSlideChange={() => console.log('slide change')}
         >

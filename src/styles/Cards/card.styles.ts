@@ -13,7 +13,7 @@ export const BoxCardLayout = styled(Box)`
   position: relative;
   z-index: 0;
   border: 1px solid rgb(64, 79, 87) ;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.9);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   ::before{
      display: flex;

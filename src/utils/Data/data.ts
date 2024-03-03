@@ -191,6 +191,36 @@ export const sectionEight = [
     }
 ]
 
+export const dataForex = [
+    {
+        id: 1,
+        title: "Forex",
+        text: "Ingrese al comercio de divisas ahora. Aprenda, opere en la cuenta demo y únase a uno de los mercados financieros más grandes.",
+        img: "/assets/forex1.webp",
+        currency: "USDEUR"
+    },
+    {
+        id: 2,
+        title: "Crypto",
+        text: "Descubre oportunidades ilimitadas de trading en el mercado en expansión más grandes del mundo",
+        img: "/assets/forex2.webp",
+        currency: "USDGBP"
+    },
+    {
+        id: 3,
+        title: "Acciones",
+        text: "Únete a nosotros y descubre oportunidades sin límites en los mercados financieros.",
+        img: "/assets/forex3.webp",
+        currency: "USDCAD"
+    },
+    {
+        id: 4,
+        title: "Metales",
+        text: "Te proporcionamos las herramientas necesarias para sacar el máximo provecho de este emocionante mercado y en constante crecimiento",
+        img: "/assets/forex4.webp",
+        currency: "USDBTC"
+    }
+]
 
 export const dataContract = {
     warning: "Warning: This website is operated by Zeven Global SRL with registration number (3-102-891212), with its registered address at De la Escuela Alberto Paniagua Doscientos metros al Norte, Casa esquinera blanca a mano derecha Getsemani, San Rafael, Heredia, Costa Rica, and with physicall address at Ruta Nacional 310 Centro Comercial Plaza Amara 4th Floor, Local 405. San Jose, Costa Rica.  © 2023 Zeven Global Ltd (ZevenGlobal), a company registered in the International Business Registry of MWALI (COMOROS UNION), and regulated by the Financial Services Authority (T2023378), with its registered address at Bonovo Road-Fomboni Island of Moheli – Comoros Union.  © 2023 Zeven Global Corporation | (Seychelles), Company registration number 239592, with its registered address at House of Francis, Room 303, Ile Du Port, Mahe, Seychelles.  © 2023 Zeven Global Corporation | (Marshall Islands), Company registration number 122428, with its registered address at Ajeltake Road, Ajeltake Island, Majuro, Marshall Islands MH96960.  Risk Warning: CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. 81.4% of retail investor accounts lose money when trading CFDs with this provider. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money. Past performance is not indicative of future results, and tax laws are subject to change. The information on this website is of a general nature and does not take into account your or your client's personal objectives, financial circumstances, or needs. Please read our risk warning and other legal documents and make sure you fully understand the risks before making any trading decisions. We recommend seeking independent advice.  The information on this website and the products and services offered are not intended for distribution to any person in any country or jurisdiction where such distribution or use would be contrary to local laws or regulations. Customers must be at least 18 years old to use ZevenGlobal services.  You may incur losses that exceed the capital invested; therefore, you should not deposit money you cannot afford to lose. Make sure to fully understand the risks and take appropriate precautions to manage your risk. The site contains links to websites controlled or offered by third parties. ZevenGlobal has not reviewed and hereby disclaims any responsibility for any information or material posted on any of the linked sites. By creating a link to a third-party website, ZevenGlobal does not endorse or recommend any product or service offered on that website. The information contained on this site is for informational purposes only. If you are unsure about your local currency and trading regulations, you should leave this site immediately.  We strongly recommend that you obtain independent financial, legal, and tax advice before proceeding with any forex or financial asset trading. ZevenGlobal services and the information on this site are not directed to, nor intended for use by, any person in any country or jurisdiction where such distribution or use would be contrary to local law or regulation. We, Zeven Global Ltd, operate as a financial services broker and offer our services internationally. However, it is important to note that financial laws and regulations vary by jurisdiction and may be subject to change. Therefore, we state that each customer is responsible for knowing and complying with the current financial laws and regulations in their jurisdiction of residence. We assume no responsibility for the legal consequences that may arise if a customer fails to comply with such laws. Information provided by Zeven Global is of a general nature and does not constitute legal or financial advice. By using the services of Zeven Global Ltd, the customer acknowledges and accepts the terms of this Jurisdiction Disclaimer and understands their responsibility to comply with the applicable laws and regulations in their jurisdiction."

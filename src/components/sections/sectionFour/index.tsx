@@ -1,11 +1,62 @@
 import Bag from "@/components/bag";
+import CarouselSwiper from "@/components/swiper";
+import { ServiceForex } from "@/services/service.forex";
 import {
     Box,
     Text,
     Button
 } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
+import { SwiperSlide } from "swiper/react";
+
 
 const SectionFour = () => {
+    const [quotes, setQuotes] = useState<any>()
+
+    const dataForex = [
+        {
+            id: 1,
+            title: "Forex",
+            text: "Ingrese al comercio de divisas ahora. Aprenda, opere en la cuenta demo y únase a uno de los mercados financieros más grandes.",
+            img: "/assets/forex1.webp",
+            symbol: ["USDEUR", "USDGBP", "USDGBP"],
+            currency: [quotes?.USDEUR, quotes?.USDGBP, quotes?.USDAUD]
+        },
+        {
+            id: 2,
+            title: "Crypto",
+            text: "Descubre oportunidades ilimitadas de trading en el mercado en expansión más grandes del mundo",
+            img: "/assets/forex2.webp",
+            symbol: ["USDBTC"],
+            currency: [quotes?.USDBTC]
+        },
+        {
+            id: 3,
+            title: "Acciones",
+            text: "Únete a nosotros y descubre oportunidades sin límites en los mercados financieros.",
+            img: "/assets/forex3.webp",
+            symbol: ["USDEUR", "USDGBP"],
+            currency: [quotes?.USDEUR, quotes?.USDGBP,]
+        },
+        {
+            id: 4,
+            title: "Metales",
+            text: "Te proporcionamos las herramientas necesarias para sacar el máximo provecho de este emocionante mercado y en constante crecimiento",
+            img: "/assets/forex4.webp",
+            symbol: ["USDEUR", "USDGBP"],
+            currency: [quotes?.USDEUR, quotes?.USDGBP,]
+        }
+    ]
+
+    //*Se ejecuta el llamado cuando carga el componete
+    useEffect(() => {
+        (async () => {
+            const res = await ServiceForex.getForex()
+            setQuotes(res?.cachedData.quotes)
+
+        })()
+    }, [])
+
     return (
         <Box
             display="flex"
@@ -74,7 +125,21 @@ const SectionFour = () => {
                     Acciones
                 </Button>
             </Box>
-            <Bag />
+            <Box
+                display="flex"
+                width="100%"
+                height='auto'
+            >
+                <CarouselSwiper breakpoint={1} autoPlay={false}>
+                    {
+                        dataForex.map((item, index) => (
+                            <SwiperSlide key={index}>
+                                <Bag details={item} />
+                            </SwiperSlide>
+                        ))
+                    }
+                </CarouselSwiper>
+            </Box>
         </Box>
     );
 }

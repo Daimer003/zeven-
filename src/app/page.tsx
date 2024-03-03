@@ -45,7 +45,6 @@ export default function Home() {
         justifyContent="center"
         alignItems="center"
         overflow="hidden"
-        padding="0 20px"
         boxSizing="border-box"
       >
         {
@@ -55,14 +54,42 @@ export default function Home() {
               <Box
                 width="100%"
                 maxW="1196px"
+                padding="0 20px"
+                boxSizing="border-box"
               >
                 <Navbar />
                 <Header />
                 <SectionTwo />
                 <SectionThree />
                 <SectionFour />
-                <SectionFive />
-                <SectionSix />
+
+                <Box
+                  display="flex"
+                  width="100%"
+                  height="auto"
+                  flexDir="column"
+                  position="relative"
+                >
+                  <Box
+                    display="flex"
+                    content=""
+                    width="2000px"
+                    height="100%"
+                    position="absolute"
+                    right={{ base: "-100px", md: "-90%" }}
+                    top="0px"
+                  >
+                    <Box
+                      width="100%"
+                      height="100%"
+                      bgGradient='radial-gradient(circle, #01b2acc2 0%, rgba(255,255,255,0) 48%)'
+                    />
+
+                  </Box>
+                  <SectionFive />
+                  <SectionSix />
+                </Box>
+
                 <SectionSeven />
                 <SectionEight />
                 <SectionNine />

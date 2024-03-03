@@ -14,6 +14,7 @@ export const BoxCard = styled(Box)`
   z-index: 0;
   border-radius: 20px;
   border: 1px solid rgb(64, 79, 87) ;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   cursor: pointer;
   ::before{

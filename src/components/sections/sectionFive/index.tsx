@@ -24,6 +24,8 @@ const SectionFive = () => {
             display="flex"
             width="100%"
             justifyContent="center"
+            position="relative"
+            zIndex="99"
         >
             <Box
                 display="flex"

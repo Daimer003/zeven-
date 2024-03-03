@@ -65,7 +65,12 @@ const SectionNine = () => {
                         Únase a Zeven: ¡Su socio comercial
                         de confianza
                     </Text>
-                    <Text as="p" maxW="450px" textAlign="center">
+                    <Text
+                        as="p"
+                        maxW="450px"
+                        textAlign="center"
+                        color="white"
+                    >
                         Conviértase en un socio de una comunidad global de
                         comerciantes que eligieron comerciar con Zeven.
                     </Text>
@@ -100,6 +105,7 @@ const SectionNine = () => {
                                             height="100%"
                                             boxSizing="border-box"
                                             fontSize={{ base: "45px", md: "70px" }}
+                                            color="white"
                                         >
                                             {icons[index]}
                                         </Box>
@@ -107,7 +113,10 @@ const SectionNine = () => {
                                 </Box>
                                 {
                                     index <= 1 &&
-                                    <Box fontSize={{ base: "24px", md: "70px" }}>
+                                    <Box
+                                        color="white"
+                                        fontSize={{ base: "24px", md: "70px" }}
+                                    >
                                         <FaArrowRight />
                                     </Box>
                                 }

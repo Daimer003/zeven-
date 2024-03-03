@@ -8,6 +8,7 @@ import Link from "next/link";
 const Header = () => {
     return (
         <Box
+            id="header"
             display="flex"
             flexDir="column"
             alignItems="center"

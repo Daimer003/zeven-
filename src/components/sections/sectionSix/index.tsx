@@ -50,6 +50,8 @@ const SectionSix = () => {
             height='auto'
             marginTop={{ base: "80px", md: "160px" }}
             gap="40px"
+            position="relative"
+            zIndex="99"
         >
             <Box
                 display='flex'
@@ -63,7 +65,11 @@ const SectionSix = () => {
                     top='-40px'
                     zIndex={9}
                     isDisabled={positionScroll == 560}
-                    onClick={scrollTop}><FaArrowCircleUp size={40} /></Button>
+                    onClick={scrollTop}
+                    color="white"
+                >
+                    <FaArrowCircleUp size={40} />
+                </Button>
                 <Button
                     display='flex'
                     position='absolute'
@@ -72,7 +78,11 @@ const SectionSix = () => {
                     bottom='-40px'
                     zIndex={9}
                     isDisabled={positionScroll < 0}
-                    onClick={scrollBottom}><FaArrowCircleDown size={40} /></Button>
+                    onClick={scrollBottom}
+                    color="white"
+                >
+                    <FaArrowCircleDown size={40} />
+                </Button>
 
                 <Box
                     ref={contentRef}
@@ -121,10 +131,14 @@ const SectionSix = () => {
                                         as='h4'
                                         fontSize='xx-large'
                                         fontWeight="700"
+                                        color="white"
                                     >
                                         {item.title}
                                     </Text>
-                                    <Text as='p'>
+                                    <Text
+                                        as='p'
+                                        color="white"
+                                    >
                                         {item.text}
                                     </Text>
                                 </Box>

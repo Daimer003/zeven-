@@ -8,13 +8,18 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 
-const CardBag = () => {
+interface Props {
+    value: string,
+    currencies: any
+}
+
+const CardBag = ({ currencies, value }: Props) => {
     return (
         <Box
             display="flex"
             flexDir="column"
             width="100%"
-            maxWidth="800px"
+            maxWidth="1200px"
             bg='rgba(255, 255, 255, 0.1)'
             padding="10px"
             boxSizing="border-box"
@@ -42,7 +47,11 @@ const CardBag = () => {
                         alignItems="center"
                         width="60px"
                     >
-                        <Image src="/assets/svgs/icon-us.svg" alt="Icono de pais" width={30} height={30} />
+                        <Image
+                            src="/assets/svgs/icon-us.svg"
+                            alt="Icono de pais"
+                            width={30}
+                            height={30} />
                     </HStack>
                     <Box
                         display="flex"
@@ -51,12 +60,8 @@ const CardBag = () => {
                         <Text
                             as="span"
                             color="white"
-                        >EURUSD
-                        </Text>
-                        <Text
-                            as="span"
-                            color="white"
-                        >EUR/USD
+                        >
+                            {currencies}
                         </Text>
                     </Box>
                 </Box>
@@ -67,7 +72,7 @@ const CardBag = () => {
                         variant="buttonSecondary"
                         borderRadius='4px'
                     >
-                        Invierte ahora
+                        Trade
                     </Button>
                 </Box>
             </Box>
@@ -79,15 +84,15 @@ const CardBag = () => {
                     as="span"
                     color="white"
                 >
-                    $1.078841
+                    {value}
                 </Text>
                 <Spacer />
-                <Text
+                {/* <Text
                     as="span"
                     color="white"
                 >
                     -0.01%
-                </Text>s
+                </Text>s */}
             </Box>
         </Box>
     );

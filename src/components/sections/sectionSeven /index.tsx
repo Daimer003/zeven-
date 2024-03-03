@@ -70,6 +70,7 @@ const SectionSeven = () => {
                                                 as="span"
                                                 fontSize='x-large'
                                                 fontWeight='600'
+                                                color="white"
                                             >
                                                 {item.title}
                                             </Text>
@@ -78,12 +79,14 @@ const SectionSeven = () => {
                                 </Box>
                             </SwiperSlide>
                         ))
-
                     }
                 </CarouselSwiper>
-
             </Box>
-            <Text as="p">*Los precios son solamente para propósitos indicativos basados en los spreads de cuentas en MT5.</Text>
+            <Text as="p"
+                color="white"
+                textAlign="center"
+            >*Los precios son solamente para propósitos indicativos basados en los spreads de cuentas en MT5.
+            </Text>
         </Box>
     );
 }

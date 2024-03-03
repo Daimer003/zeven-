@@ -12,23 +12,29 @@ const SectionTen = () => {
             gap="40px"
             marginTop={{ base: "80px", md: "160px" }}
             position="relative"
+            marginBottom="40px"
         >
             <Box
                 display="flex"
                 content=""
-                width={{ base: "600px", md: "2000px" }}
-                height="900px"
+                width={{ base: "900px", md: "2000px" }}
+                height="1200px"
                 position="absolute"
-                bottom={{ base: "10%", md: "-30%" }}
-                zIndex="-1"
+                bottom={{ base: "-20%", md: "-80%" }}
+                zIndex="0"
             >
                 <Box
                     width="100%"
                     height="100%"
-                    bgGradient='radial-gradient(circle, #01b2ac94 0%, rgba(255,255,255,0) 50%)'
+                    bgGradient='radial-gradient(circle, #01b2ac94 0%, rgba(255,255,255,0) 60%)'
                 />
             </Box>
-            <Box>
+            <Box
+                display="flex"
+                flexDir="column"
+                position="relative"
+                zIndex="999"
+            >
                 <Box
                     display="flex"
                     flexDir="column"
@@ -46,7 +52,12 @@ const SectionTen = () => {
                     >
                         Variedad de plataformas
                     </Text>
-                    <Text as="p" maxWidth="700px" textAlign="center">
+                    <Text
+                        as="p"
+                        maxWidth="700px"
+                        textAlign="center"
+                        color="white"
+                    >
                         Nuestras aplicaciones móviles fáciles de usar para IOS   y Android, así como nuestra aplicación web,
                         le facilitan el acceso a su cuenta y el comercio desde cualquier lugar.
                     </Text>

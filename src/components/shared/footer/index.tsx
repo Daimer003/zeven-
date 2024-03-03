@@ -1,4 +1,4 @@
-import { Box, Text, UnorderedList, ListItem } from "@chakra-ui/react";
+import { Box, Text, UnorderedList, ListItem, useColorModeValue } from "@chakra-ui/react";
 import Image from "next/image";
 import { TbBrandLinkedin } from "react-icons/tb";
 import { FaInstagram } from "react-icons/fa";
@@ -14,10 +14,11 @@ const Footer = () => {
             width="100%"
             alignItems="center"
             height="auto"
-            background="black"
+            background={useColorModeValue('#072130', '#000000')}
             padding="40px 20px"
             boxSizing="border-box"
             gap="60px"
+            zIndex="9999"
         >
             <Box
                 display="flex"
@@ -41,26 +42,53 @@ const Footer = () => {
                             width={35}
                             height={35}
                         />
-                        <Text as="p" fontSize="xx-large" fontWeight="800">even</Text>
+                        <Text
+                            as="p"
+                            fontSize="xx-large"
+                            fontWeight="800"
+                            color="white"
+                        >
+                            even
+                        </Text>
                     </Box>
                     <Box
                         display="flex"
                         gap="10px"
+                        color="white"
                     >
                         <TbBrandLinkedin size="28px" />
                         <FaInstagram size="28px" />
                         <TfiTwitter size="28px" />
                     </Box>
-                    <Text as="span" fontWeight="800px" fontSize="20px">Zeven Global</Text>
-                    <UnorderedList spacing={2} maxW="500px">
+                    <Text
+                        as="span"
+                        fontWeight="800px"
+                        fontSize="20px"
+                        color="white"
+                    >
+                        Zeven Global
+                    </Text>
+                    <UnorderedList
+                        color="white"
+                        spacing={2}
+                        maxW="500px"
+                    >
                         <ListItem>(+50) 661472275</ListItem>
                         <ListItem>OFICINA CENTRAL: Ruta Nacional 310 Centro Comercial Plaza Amara 4th Floor, Local 405. San Jose, Costa Rica</ListItem>
                         <ListItem>soporte@zevenglobal.com</ListItem>
                     </UnorderedList>
                 </Box>
                 <Box>
-                    <Text as="span" fontWeight="600px" fontSize="20px">Documentos</Text>
-                    <UnorderedList spacing={2}>
+                    <Text
+                        as="span"
+                        fontWeight="600px"
+                        fontSize="20px"
+                        color="white"
+                    >Documentos</Text>
+                    <UnorderedList
+                        color="white"
+                        spacing={2}
+                    >
                         <ListItem>Protección de datos</ListItem>
                         <ListItem>Políticas de  privacidad</ListItem>
                         <ListItem>Política AML</ListItem>
@@ -68,8 +96,18 @@ const Footer = () => {
                 </Box>
                 <Box>
                     <Box>
-                        <Text as="span" fontWeight="600px" fontSize="20px">Menú</Text>
-                        <UnorderedList spacing={2}>
+                        <Text
+                            as="span"
+                            fontWeight="600px"
+                            fontSize="20px"
+                            color="white"
+                        >
+                            Menú
+                        </Text>
+                        <UnorderedList
+                            color="white"
+                            spacing={2}
+                        >
                             <ListItem>Inicio</ListItem>
                             <ListItem>Opera con nosotros</ListItem>
                             <ListItem>Plataformas</ListItem>
@@ -80,8 +118,18 @@ const Footer = () => {
                 </Box>
                 <Box>
                     <Box>
-                        <Text as="span" fontWeight="600px" fontSize="20px">Calculadoras de Trading</Text>
-                        <UnorderedList spacing={2}>
+                        <Text
+                            as="span"
+                            fontWeight="600px"
+                            fontSize="20px"
+                            color="white"
+                        >
+                            Calculadoras de Trading
+                        </Text>
+                        <UnorderedList
+                            color="white"
+                            spacing={2}
+                        >
                             <ListItem>Calculadora Tamaño posición</ListItem>
                             <ListItem>Calculadora de margen</ListItem>
                             <ListItem>Calculadora de ganancias</ListItem>
@@ -93,8 +141,18 @@ const Footer = () => {
                 </Box>
                 <Box>
                     <Box>
-                        <Text as="span" fontWeight="600px" fontSize="20px">Mercado Forex</Text>
-                        <UnorderedList spacing={2}>
+                        <Text
+                            color="white"
+                            as="span"
+                            fontWeight="600px"
+                            fontSize="20px"
+                        >
+                            Mercado Forex
+                        </Text>
+                        <UnorderedList
+                            color="white"
+                            spacing={2}
+                        >
                             <ListItem>Forex</ListItem>
                             <ListItem>Indices</ListItem>
                             <ListItem>Bonos</ListItem>
@@ -111,7 +169,10 @@ const Footer = () => {
                 borderColor="g"
                 padding="20px"
             >
-                <Text as="p">
+                <Text
+                    as="p"
+                    color="white"
+                >
                     {dataContract.warning}
                 </Text>
             </Box>
